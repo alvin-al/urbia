@@ -7,7 +7,7 @@ import Footer from '@/components/footer'
 
 const Homepage = () => {
   return (
-    <div className="flex flex-col w-auto h-[95vh] px-6 border">
+    <div className="flex flex-col w-auto h-[95vh] px-6">
       <div>
         <Header />
       </div>
