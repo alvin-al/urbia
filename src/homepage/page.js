@@ -7,17 +7,19 @@ import Footer from '@/components/footer'
 
 const Homepage = () => {
   return (
-    <div className="flex flex-col w-auto h-[100vh] px-6">
+    <div className="flex flex-col w-auto h-[95vh] px-6">
       <div>
+        <div>
         <Header />
       </div>
-      <div className="mb-24">
+      <div>
         <DemoCarousel/>
+      </div>
       </div>
       <div>
         <Social />
       </div>
-      <div>
+      <div  className="absolute bottom-0">
         <Footer/>
       </div>
     </div>
