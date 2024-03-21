@@ -44,7 +44,7 @@ const DemoCarousel = () => {
           }} 
         plugins={[
             Autoplay({
-              delay: 1000,
+              delay: 2000,
             }),
           ]}>
         <CarouselContent>
