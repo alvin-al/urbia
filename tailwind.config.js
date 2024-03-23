@@ -51,6 +51,7 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -70,6 +71,22 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      fontFamily: {
+        raleway: ['Raleway', 'sans-serif'],
+        fraunces: ['Fraunces', 'sans-serif'],
+      },
+      fontSize: {
+        'head': '96px',
+        'head-web': '48px',
+        'head-tab': '36px',
+        'head-phone': '20px',
+        'services-points': '32px',
+        'subheader': '16px',
+        'footer': '16px',
+        'paragraph': '20px',
+        'display': '24px',
+        'display-phone': '16px',
       },
     },
   },
