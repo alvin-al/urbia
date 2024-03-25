@@ -4,7 +4,7 @@ import { Icon } from '@iconify-icon/react'
 
 const Social = () => {
   return (
-    <div className="flex gap-1 my-2">
+    <div className="flex gap-1">
         <a href="#">
           <button className=' hover:bg-gray-200 p-1 rounded-sm'>
             <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" className='fill-current text-gray-600 group-hover:text-black hover hover:text-black'>
