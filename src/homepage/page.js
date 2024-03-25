@@ -8,10 +8,10 @@ import * as styles from '@/components/styles'
 
 const Homepage = () => {
   return (
-    <div className="flex flex-col w-auto h-[95vh] px-6">
+    <div className={styles.pageSize}>
       <div>
         <div>
-          <Header />
+          <Header title='Home'/>
         </div>
         <div>
           <p className={`${styles.head} text-right`}>  

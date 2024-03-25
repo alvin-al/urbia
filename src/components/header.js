@@ -5,7 +5,7 @@ import logo from '@/../public/images/logo.svg'
 import OverlayMenu from './overlayMenu';
 
 
-const Header = () => {
+const Header = ({title}) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -14,6 +14,8 @@ const Header = () => {
 
   return (
     <div className="flex h-[60px] items-center gap-2 z-0">
+      <title>{title}</title>
+      <link rel="icon" href="favicon.ico" type="image/x-icon" />
       <button 
         className={`${"flex flex-col h-10 w-10 rounded justify-center items-center group hover:fade-in-100 z-30"} ${isOpen ? "border-2 lg:hover:bg-gray-600" : "hover:bg-gray-200 "}`} 
         onClick={() => {

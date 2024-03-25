@@ -1,5 +1,14 @@
 // styles.js
 
+//Class
+//Page class
+export const pageSize = "flex flex-col w-auto h-[95vh] px-6";
+
+
+
+
+
+//Font
 export const mainHead = "font-extrabold text-4xl";
 export const head = "font-semibold text-lg md:font-semibold md:text-xl lg:font-semibold lg:text-2xl";
 export const servicesPoints = "font-semibold text-base";
