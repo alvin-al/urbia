@@ -14,7 +14,7 @@ const Homepage = () => {
           <Header />
         </div>
         <div>
-          <p className={`${styles.headPhone} text-right md:${styles.headTab} lg:${styles.headWeb}`}>  
+          <p className={`${styles.head} text-right`}>  
             URBIA SPATIAL MANIFESTO
           </p>
         </div>

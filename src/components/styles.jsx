@@ -1,9 +1,7 @@
 // styles.js
 
-export const head = "font-extrabold text-4xl";
-export const headWeb = "font-semibold text-2xl";
-export const headTab = "font-semibold text-xl";
-export const headPhone = "font-semibold text-lg";
+export const mainHead = "font-extrabold text-4xl";
+export const head = "font-semibold text-lg md:font-semibold md:text-xl lg:font-semibold lg:text-2xl";
 export const servicesPoints = "font-semibold text-base";
 export const subheader = "font-medium text-sm";
 export const footer = "font-semibold text-sm";
