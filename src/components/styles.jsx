@@ -2,7 +2,7 @@
 
 //Class
 //Page class
-export const pageSize = "flex flex-col w-auto h-[95vh] px-6";
+export const pageSize = "flex flex-col w-auto px-6";
 
 
 

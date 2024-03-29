@@ -37,7 +37,7 @@ const DemoCarousel = () => {
 
 
   return (
-    <div className="rounded-lg h-[70vh] lg:h-[75vh] my-2">
+    <div className="rounded-lg border-black my-2">
       <Carousel 
         opts={{
           loop: true,
@@ -46,11 +46,13 @@ const DemoCarousel = () => {
             Autoplay({
               delay: 3000,
             }),
-          ]}>
+          ]}
+        className="flex flex-col h-[73vh] xl:h-[76vh] rounded-lg border-red-100"
+        >
         <CarouselContent>
-          <CarouselItem><Image src={pic1} alt="" className="rounded-lg object-cover h-[70vh] lg:h-[75vh] w-full"/></CarouselItem>
-          <CarouselItem><Image src={pic2} alt="" className="rounded-lg object-cover h-[70vh] lg:h-[75vh] w-full"/></CarouselItem>
-          <CarouselItem><Image src={pic3} alt="" className="rounded-lg object-cover h-[70vh] lg:h-[75vh] w-full object-bottom"/></CarouselItem>
+          <CarouselItem><Image src={pic1} alt="" className="rounded-lg object-cover w-full h-[73vh] xl:h-[76vh] object-bottom"/></CarouselItem>
+          <CarouselItem><Image src={pic2} alt="" className="rounded-lg object-cover w-full h-[73vh] xl:h-[76vh] object-bottom"/></CarouselItem>
+          <CarouselItem><Image src={pic3} alt="" className="rounded-lg object-cover w-full h-[73vh] xl:h-[76vh] object-bottom"/></CarouselItem>
         </CarouselContent>
       </Carousel>
       

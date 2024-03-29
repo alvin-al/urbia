@@ -8,8 +8,7 @@ import * as styles from '@/components/styles'
 
 const Homepage = () => {
   return (
-    <div className={styles.pageSize}>
-      <div>
+    <div className={`${styles.pageSize} h-[100vh]`}>
         <div>
           <Header title='Home'/>
         </div>
@@ -21,11 +20,10 @@ const Homepage = () => {
         <div>
           <DemoCarousel/>
         </div>
-      </div>
         <div>
           <Social />
         </div>
-        <div  className="absolute bottom-0">
+        <div>
           <Footer/>
         </div>
     </div>

@@ -93,3 +93,7 @@ body, main {
   visibility: hidden;
   animation-delay: 200ms;
 }
+
+.custom-flex {
+  flex: 0 0 30%;
+}
