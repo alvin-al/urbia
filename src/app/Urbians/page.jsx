@@ -30,7 +30,7 @@ const Urbians = () => {
 
   return (
     <div className={`${styles.pageSize} flex border`}>
-        <div className="h-[95vh] flex flex-col justify-between">
+        <div className="h-[90vh] flex flex-col justify-between">
           <div>
             <Header title='Urbians' />
           </div>
