@@ -47,8 +47,8 @@ const Services = () => {
     const Items = ({no, title, caption}) => {
         return (
             <AccordionItem value={no} className="lg:pb-12 border-b-2 border-black">
-                <AccordionTrigger className="text-xl font-semibold md:text-2xl text-left no-underline">{title}</AccordionTrigger>
-                    <AccordionContent className={`mt-2 mb-8 lg:pl-[50%] ${styles.paragraph}`}>
+                <AccordionTrigger className="text-xl font-semibold md:text-2xl text-left no-underline pb-8">{title}</AccordionTrigger>
+                    <AccordionContent className={`mb-8 lg:pl-[50%] ${styles.paragraph}`}>
                         {caption}
                     </AccordionContent>
             </AccordionItem>
