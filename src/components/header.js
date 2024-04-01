@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Image from "next/image";
 import logo from '@/../public/images/logo.svg'
+import logoWhite from '@/../public/images/logo-white.svg'
 import OverlayMenu from './overlayMenu';
 
 
@@ -17,7 +18,7 @@ const Header = ({title}) => {
       <title>{title}</title>
       <link rel="icon" href="favicon.ico" type="image/x-icon" />
       <button 
-        className={`${"flex flex-col h-10 w-10 rounded justify-center items-center group hover:fade-in-100 z-30"} ${isOpen ? "border-2 lg:hover:bg-gray-600" : "hover:bg-gray-200 "}`} 
+        className={`${"flex flex-col h-10 w-10 rounded justify-center items-center group hover:fade-in-100 z-30"} ${isOpen ? "border-2 lg:hover:bg-gray-600" : "hover:bg-gray-200 "} ${title == "services" ? "bg-white" : null}`} 
         onClick={() => {
           toggleMenu();
         }}>
@@ -27,7 +28,9 @@ const Header = ({title}) => {
         <div className={`${genericHamburgerLine} ${isOpen ? "-rotate-45 -translate-y-2 opacity-100 bg-white" : "opacity-50 group-hover:opacity-100"}`}/>
       </button>
         <div>
-            <a href=""><Image src={logo} alt='logo' sizes="(max-width : 375px) 80vw"/></a>
+            <a href="">
+              <Image src={title === 'services' ? logoWhite : logo} alt='logo' sizes="(max-width : 375px) 80vw" />
+            </a>
         </div>
         <OverlayMenu isOpen={isOpen} />
     </div>
