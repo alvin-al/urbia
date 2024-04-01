@@ -12,7 +12,7 @@ import { useState } from "react"
 import pic1 from '@/../public/images/AJ1.webp'
 import pic2 from '@/../public/images/Giorno.png'
 import pic3 from '@/../public/images/living room lt.1.webp'
-import pic4 from '@/../public/images/XT NOON 3.webp'
+import pic4 from '@/../public/images/XT-NOON-3.webp'
 import Autoplay from 'embla-carousel-autoplay'  
 
 const DemoCarousel = () => {

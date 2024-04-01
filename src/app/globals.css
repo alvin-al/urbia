@@ -93,3 +93,39 @@ body, main {
   visibility: hidden;
   animation-delay: 200ms;
 }
+
+.iframe-home:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url(/images/Giorno.png);
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.iframe-projects:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url(/images/AJ1.webp/);
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.iframe-services:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url(/images/Giorno.png);
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.iframe-about-us:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url(/images/XT-NOON-3.webp);
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-position: center;
+  background-repeat: no-repeat;
+}
