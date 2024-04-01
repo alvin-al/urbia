@@ -3,11 +3,57 @@ import Image from "next/image";
 import Header from "@/components/header";
 import * as styles from '@/components/styles'
 import buildingLineart from '@/../public/images/services-background/building-lineart.svg'
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+import Footer from "@/components/footer";
+
 
 
 const Services = () => {
     const serviceCaption = `Explore Urbia's unparalleled services, where sophistication meets simplicity. Elevate your lifestyle with our curated range of offerings designed to exceed your expectations. From bespoke design consultations to seamless property management, Urbia ensures every aspect of your experience is marked by elegance and ease. Step into a world of refined living with Urbia's premier services.`;
 
+    const itemsContent = [
+        {
+            no: 1,
+            title: 'Architectural Consultation',
+            caption: 'adalah produk konsultan desain interior untuk berkarya, dengan mengutamakan detail dan kebaharuan desain produk pun selaras dengan kontekstual desain arsitektur yang diterapkan. adalah produk konsultan desain interior untuk berkarya, dengan mengutamakan detail dan kebaharuan desain produk pun selaras dengan kontekstual desain arsitektur yang diterapkan. '
+        },
+        {
+            no: 2,
+            title: 'Construction & Renovation',
+            caption: 'adalah produk konsultan desain interior untuk berkarya, dengan mengutamakan detail dan kebaharuan desain produk pun selaras dengan kontekstual desain arsitektur yang diterapkan. adalah produk konsultan desain interior untuk berkarya, dengan mengutamakan detail dan kebaharuan desain produk pun selaras dengan kontekstual desain arsitektur yang diterapkan. '
+        },
+        {
+            no: 3,
+            title: 'Property Business Development',
+            caption: 'adalah produk konsultan desain interior untuk berkarya, dengan mengutamakan detail dan kebaharuan desain produk pun selaras dengan kontekstual desain arsitektur yang diterapkan. adalah produk konsultan desain interior untuk berkarya, dengan mengutamakan detail dan kebaharuan desain produk pun selaras dengan kontekstual desain arsitektur yang diterapkan. '
+        },
+        {
+            no: 4,
+            title: 'Interior & Furniture',
+            caption: 'adalah produk konsultan desain interior untuk berkarya, dengan mengutamakan detail dan kebaharuan desain produk pun selaras dengan kontekstual desain arsitektur yang diterapkan. adalah produk konsultan desain interior untuk berkarya, dengan mengutamakan detail dan kebaharuan desain produk pun selaras dengan kontekstual desain arsitektur yang diterapkan. '
+        },
+        {
+            no: 5,
+            title: 'Research & Development',
+            caption: 'adalah produk konsultan desain interior untuk berkarya, dengan mengutamakan detail dan kebaharuan desain produk pun selaras dengan kontekstual desain arsitektur yang diterapkan. adalah produk konsultan desain interior untuk berkarya, dengan mengutamakan detail dan kebaharuan desain produk pun selaras dengan kontekstual desain arsitektur yang diterapkan. '
+        },
+    ];
+
+    const Items = ({no, title, caption}) => {
+        return (
+            <AccordionItem value={no} className="lg:pb-12 border-b-2 border-black">
+                <AccordionTrigger className="text-xl font-semibold md:text-2xl text-left no-underline">{title}</AccordionTrigger>
+                    <AccordionContent className={`mt-2 mb-8 lg:pl-[50%] ${styles.paragraph}`}>
+                        {caption}
+                    </AccordionContent>
+            </AccordionItem>
+        )
+    }
 
 
     return (
@@ -23,6 +69,18 @@ const Services = () => {
                         <p className={`${styles.paragraph} text-white mb-10 lg:pr-12 xl:pr-24`}>{serviceCaption}</p>
                     </div>
                 </div>
+            </div>
+
+            <div className={`${styles.pageSize} mt-6 mb-24`}>
+                <Accordion type="single" collapsible>                    
+                    {itemsContent.map((item, index) => (
+                        <Items key={index} no={itemsContent[index].no} title={itemsContent[index].title} caption={itemsContent[index].caption} />
+                    ))}
+                </Accordion>
+            </div>
+
+            <div className={`${styles.pageSize}`}>
+                <Footer />
             </div>
         </div>
     );
