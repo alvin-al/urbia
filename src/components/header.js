@@ -1,5 +1,5 @@
-"use client"
-import React, { useState } from 'react';
+'use client'
+import React, { useState, useEffect } from 'react';
 import Image from "next/image";
 import logo from '@/../public/images/logo.svg'
 import logoWhite from '@/../public/images/logo-white.svg'
@@ -9,6 +9,21 @@ import Link from "next/link";
 
 const Header = ({title}) => {
   const [isOpen, setIsOpen] = useState(false);
+  
+  // Add event listener to handle scrolling when the component mounts
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+
+    // Clean up by removing the event listener when the component unmounts
+    return () => {
+      document.body.classList.remove('no-scroll');
+    };
+  }, [isOpen]);
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
