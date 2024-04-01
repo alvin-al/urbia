@@ -4,6 +4,7 @@ import Image from "next/image";
 import logo from '@/../public/images/logo.svg'
 import logoWhite from '@/../public/images/logo-white.svg'
 import OverlayMenu from './overlayMenu';
+import Link from "next/link";
 
 
 const Header = ({title}) => {
@@ -28,9 +29,9 @@ const Header = ({title}) => {
         <div className={`${genericHamburgerLine} ${isOpen ? "-rotate-45 -translate-y-2 opacity-100 bg-white" : "opacity-50 group-hover:opacity-100"}`}/>
       </button>
         <div>
-            <a href="">
+            <Link href="">
               <Image src={title === 'services' ? logoWhite : logo} alt='logo' sizes="(max-width : 375px) 80vw" />
-            </a>
+            </Link>
         </div>
         <OverlayMenu isOpen={isOpen} />
     </div>
