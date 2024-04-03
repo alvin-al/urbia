@@ -9,9 +9,9 @@ const OverlayMenu = ({ isOpen }) => {
 
         <Link href="" className='hover:underline w-full h-1/4 flex justify-center items-center text-center text-4xl border-b lg:border-b-0 lg:border-r lg:h-full hover:ease-in-out iframe-projects'>Projects</Link>
 
-        <Link href="/Services" className='hover:underline w-full h-1/4 flex justify-center items-center text-center text-4xl border-b lg:border-b-0 lg:border-r lg:h-full iframe-services'>Services</Link>
+        <Link href="/services" className='hover:underline w-full h-1/4 flex justify-center items-center text-center text-4xl border-b lg:border-b-0 lg:border-r lg:h-full iframe-services'>Services</Link>
 
-        <Link href="/Urbians" className='hover:underline w-full h-1/4 flex justify-center items-center text-center text-4xl lg:h-full iframe-about-us'>About Us</Link>
+        <Link href="/urbians" className='hover:underline w-full h-1/4 flex justify-center items-center text-center text-4xl lg:h-full iframe-about-us'>About Us</Link>
       </nav>
     </div>
   );

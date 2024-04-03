@@ -31,21 +31,21 @@ const Header = ({title}) => {
 
   return (
     <div className="flex h-[60px] items-center gap-2 z-0">
-      <title>{title}</title>
+      <title>{`${title} | Urbia`}</title>
       <link rel="icon" href="favicon.ico" type="image/x-icon" />
       <button 
-        className={`${"flex flex-col h-10 w-10 rounded justify-center items-center group hover:fade-in-100 z-30"} ${isOpen ? "border-2 lg:hover:bg-gray-600" : "hover:bg-gray-200"} ${title == "services" ? "hover:bg-gray-400" : null}`} 
+        className={`${"flex flex-col h-10 w-10 rounded justify-center items-center group hover:fade-in-100 z-30"} ${isOpen ? "border-2 lg:hover:bg-gray-600" : "hover:bg-gray-200"} ${title == "Services" ? "hover:bg-gray-400" : null}`} 
         onClick={() => {
           toggleMenu();
         }}>
         
-        <div className={`${genericHamburgerLine} ${isOpen ? "rotate-45 translate-y-2 opacity-100 bg-white" : "opacity-50 group-hover:opacity-100 "} ${title == "services" ? "bg-white" : null}`}/>
-        <div className={`${genericHamburgerLine} ${isOpen ? "opacity-0" : "opacity-50 group-hover:opacity-100"} ${title == "services" ? "bg-white" : null}`}/>
-        <div className={`${genericHamburgerLine} ${isOpen ? "-rotate-45 -translate-y-2 opacity-100 bg-white" : "opacity-50 group-hover:opacity-100"} ${title == "services" ? "bg-white" : null}`}/>
+        <div className={`${genericHamburgerLine} ${isOpen ? "rotate-45 translate-y-2 opacity-100 bg-white" : "opacity-50 group-hover:opacity-100 "} ${title == "Services" ? "bg-white" : null}`}/>
+        <div className={`${genericHamburgerLine} ${isOpen ? "opacity-0" : "opacity-50 group-hover:opacity-100"} ${title == "Services" ? "bg-white" : null}`}/>
+        <div className={`${genericHamburgerLine} ${isOpen ? "-rotate-45 -translate-y-2 opacity-100 bg-white" : "opacity-50 group-hover:opacity-100"} ${title == "Services" ? "bg-white" : null}`}/>
       </button>
         <div>
             <Link href="/">
-              <Image src={title === 'services' ? logoWhite : logo} alt='logo' sizes="(max-width : 375px) 80vw" />
+              <Image src={title === 'Services' ? logoWhite : logo} alt='logo' sizes="(max-width : 375px) 80vw" />
             </Link>
         </div>
         <OverlayMenu isOpen={isOpen} />
