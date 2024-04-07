@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '@/components/header'
-import DemoCarousel from '@/components/carousel'
+import HomeCarousel from '@/components/carousel'
 import Social from '@/components/social'
 import Footer from '@/components/footer'
 import * as styles from '@/components/styles'
@@ -18,7 +18,7 @@ const Homepage = () => {
           </p>
         </div>
         <div>
-          <DemoCarousel/>
+          <HomeCarousel/>
         </div>
         <div>
           <Social />

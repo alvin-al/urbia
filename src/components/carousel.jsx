@@ -15,7 +15,7 @@ import pic3 from '@/../public/images/living room lt.1.webp'
 import pic4 from '@/../public/images/XT-NOON-3.webp'
 import Autoplay from 'embla-carousel-autoplay'  
 
-const DemoCarousel = () => {
+const HomeCarousel = () => {
   const listOfPic = [
     {
       name : 'AJ House',
@@ -60,4 +60,4 @@ const DemoCarousel = () => {
   )
 }
 
-export default DemoCarousel;
+export default HomeCarousel;

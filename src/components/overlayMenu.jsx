@@ -7,7 +7,7 @@ const OverlayMenu = ({ isOpen }) => {
       <nav className='flex flex-col text-white h-full w-full lg:flex-row lg:align-middle'>
         <Link href="/" className='w-full h-1/4 flex justify-center items-center text-center text-4xl border-b lg:border-b-0 lg:border-r lg:h-full iframe-home  hover:ease-in-out hover:underline' >Home</Link>
 
-        <Link href="" className='hover:underline w-full h-1/4 flex justify-center items-center text-center text-4xl border-b lg:border-b-0 lg:border-r lg:h-full hover:ease-in-out iframe-projects'>Projects</Link>
+        <Link href="/projects" className='hover:underline w-full h-1/4 flex justify-center items-center text-center text-4xl border-b lg:border-b-0 lg:border-r lg:h-full hover:ease-in-out iframe-projects'>Projects</Link>
 
         <Link href="/services" className='hover:underline w-full h-1/4 flex justify-center items-center text-center text-4xl border-b lg:border-b-0 lg:border-r lg:h-full iframe-services'>Services</Link>
 
