@@ -82,7 +82,7 @@ const Urbians = () => {
           </div>
         </div>
 
-        <div className="flex flex-col mt-48 gap-8 text-center flex-wrap md:justify-between md:flex-nowrap md:flex-row pb-32 xl:px-24 lg:pb-64">
+        <div className="flex flex-col mt-48 gap-12 lg:gap-20 xl:gap-32 justify-center flex-wrap md:justify-between md:flex-nowrap md:flex-row pb-32 xl:px-24 lg:pb-64 lg:px-12">
           {members.map((member, index) => (
             <MemberCard key={index} name={members[index].name} src={members[index].src} position={members[index].position} />
           ))
