@@ -27,20 +27,25 @@ const Services = () => {
             no: 2,
             title: 'Construction & Renovation',
             caption: <>
-                Urbia memiliki lebih dari ____ partner dalam melaksanakan konstruksi. Konstruksi merupakan hal yang berbeda dari perencanaan. Namun, konstruksi yang baik dapat dilaksanakan apabila telah melalui perencanaan yang baik juga. Kami memahami bahwa proses konstruksi bukan hal mudah untuk dipahami, pun juga kami memahami keinginan klien terhadap proses yang cepat dan sesuai dengan keinginan. Namun, Urbia hadir untuk mendukung klien dalam memlihat proses kontruksi yang sesuai dengan perencanaan sehingga menghasilkan produk desain yang memiliki performa dan nilai sesuai yang direncanakan. 
+                Urbia memiliki lebih dari ____ mitra dalam melaksanakan konstruksi. Konstruksi merupakan hal yang berbeda dari perencanaan. Namun, konstruksi yang baik dapat dilaksanakan apabila telah melalui perencanaan yang baik juga. Kami memahami bahwa proses konstruksi bukan hal mudah untuk dipahami, pun juga kami memahami keinginan klien terhadap proses yang cepat dan sesuai dengan keinginan. Namun, Urbia hadir untuk mendukung klien dalam memahami proses konstruksi yang sesuai dengan perencanaan sehingga menghasilkan produk desain yang memiliki performa dan nilai sesuai yang direncanakan.
+                <br /><br />
+                Konstruksi dan renovasi melibatkan banyak sekali pihak. Mulai dari penyedia bahan dan material, penyedia tenaga kerja tukang, vendor-vendor, maupun penyedia jasa konstruksi itu sendiri. Terdapat beberapa aspek yang akan diperhatikan sebelum memulai proses konstruksi, yaitu:
                 <br />
-                Konstruksi dan renovasi melibatkan banyak sekali pihak. Mulai dari penyedia bahan dan material, penyedia tenaga kerja tukang, vendor-vendor, maupun penyedia jasa konstruksi itu sendiri. Terdapat beberapa aspek yang akan diperhatikan sebelum akan memulai proses konstruksi, yaitu :
-                - gambar/dokumen perencanaan.
-                - kelengkapan surat izin dan administrasi bangunan.
-                - ketersediaan bahan material. 
-                - timeline/waktu yang dibutuhkan untuk mengerjakan proses konstruksi dari awal sampai dengan selesai seluruhnya.
-                - ketersediaan dana dan pembiayaan.
-                - kesepakatan dalam melaksanakan pekerjaan konstruksi antara owner, pengawas, arsitek, hingga kontraktor, dan vendor.
+                • gambar/dokumen perencanaan.
+                <br />
+                • kelengkapan surat izin dan administrasi bangunan.
+                <br />
+                • ketersediaan bahan material.
+                <br />
+                • timeline/waktu yang dibutuhkan untuk mengerjakan proses konstruksi dari awal sampai dengan selesai seluruhnya.
+                <br />
+                • ketersediaan dana dan pembiayaan.
+                <br />
+                • kesepakatan dalam melaksanakan pekerjaan konstruksi antara pemilik, pengawas, arsitek, hingga kontraktor, dan vendor.
                 <br /><br />
                 Konstruksi dilakukan setidaknya setelah proses perencanaan selesai. Urbia merekomendasikan proses konstruksi dilakukan setelah proses perencanaan selesai. Artinya baik Urbia maupun klien telah menyepakati segala proses desain dan juga dokumen diserahkan kepada klien secara menyeluruh. Kemudian hal-hal yang berkaitan dengan mencari material terkait ataupun menggunakan kembali material yang sudah dimiliki dan memungkinkan untuk digunakan kembali dapat dilakukan bersamaan dengan proses perencanaan. Hal tersebut merupakan konteks yang dimiliki oleh klien dan menjadi concern bagi Urbia dalam proses perencanaan. Proses konstruksi yang dapat diakomodasi oleh Urbia.
                 <br /><br />
-                Renovasi merupakan proses mengkondisikan kembali bangunan atau properti yang sudah ada,,,, dengan tujuan meningkatkan kemampuan bangunan (peforma) seperti kualitas cahaya, sirkulasi udara, utilitas, kapasitas bangunan, kualitas struktur, maupun kualitas finishing. Renovasi juga dilakukan karena ingin mengubah fungsi dari sebagian atau seluruh ruangan bangunan. Selain itu juga dilakukan untuk mempercantik muka/tampilan dari bangunan.
-
+                Renovasi merupakan proses mengkondisikan kembali bangunan atau properti yang sudah ada, dengan tujuan meningkatkan kemampuan bangunan (performa) seperti kualitas cahaya, sirkulasi udara, utilitas, kapasitas bangunan, kualitas struktur, maupun kualitas finishing. Renovasi juga dilakukan karena ingin mengubah fungsi dari sebagian atau seluruh ruangan bangunan. Selain itu juga dilakukan untuk mempercantik muka/tampilan dari bangunan.
             </>
 
         },
