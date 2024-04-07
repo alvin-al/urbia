@@ -26,7 +26,23 @@ const Services = () => {
         {
             no: 2,
             title: 'Construction & Renovation',
-            caption: 'Urbia memiliki lebih dari +100 partner dalam melaksanakan konstruksipartner konstruksi pendekatan yang transparan apabila dibutuhkan'
+            caption: <>
+                Urbia memiliki lebih dari ____ partner dalam melaksanakan konstruksi. Konstruksi merupakan hal yang berbeda dari perencanaan. Namun, konstruksi yang baik dapat dilaksanakan apabila telah melalui perencanaan yang baik juga. Kami memahami bahwa proses konstruksi bukan hal mudah untuk dipahami, pun juga kami memahami keinginan klien terhadap proses yang cepat dan sesuai dengan keinginan. Namun, Urbia hadir untuk mendukung klien dalam memlihat proses kontruksi yang sesuai dengan perencanaan sehingga menghasilkan produk desain yang memiliki performa dan nilai sesuai yang direncanakan. 
+                <br />
+                Konstruksi dan renovasi melibatkan banyak sekali pihak. Mulai dari penyedia bahan dan material, penyedia tenaga kerja tukang, vendor-vendor, maupun penyedia jasa konstruksi itu sendiri. Terdapat beberapa aspek yang akan diperhatikan sebelum akan memulai proses konstruksi, yaitu :
+                - gambar/dokumen perencanaan.
+                - kelengkapan surat izin dan administrasi bangunan.
+                - ketersediaan bahan material. 
+                - timeline/waktu yang dibutuhkan untuk mengerjakan proses konstruksi dari awal sampai dengan selesai seluruhnya.
+                - ketersediaan dana dan pembiayaan.
+                - kesepakatan dalam melaksanakan pekerjaan konstruksi antara owner, pengawas, arsitek, hingga kontraktor, dan vendor.
+                <br /><br />
+                Konstruksi dilakukan setidaknya setelah proses perencanaan selesai. Urbia merekomendasikan proses konstruksi dilakukan setelah proses perencanaan selesai. Artinya baik Urbia maupun klien telah menyepakati segala proses desain dan juga dokumen diserahkan kepada klien secara menyeluruh. Kemudian hal-hal yang berkaitan dengan mencari material terkait ataupun menggunakan kembali material yang sudah dimiliki dan memungkinkan untuk digunakan kembali dapat dilakukan bersamaan dengan proses perencanaan. Hal tersebut merupakan konteks yang dimiliki oleh klien dan menjadi concern bagi Urbia dalam proses perencanaan. Proses konstruksi yang dapat diakomodasi oleh Urbia.
+                <br /><br />
+                Renovasi merupakan proses mengkondisikan kembali bangunan atau properti yang sudah ada,,,, dengan tujuan meningkatkan kemampuan bangunan (peforma) seperti kualitas cahaya, sirkulasi udara, utilitas, kapasitas bangunan, kualitas struktur, maupun kualitas finishing. Renovasi juga dilakukan karena ingin mengubah fungsi dari sebagian atau seluruh ruangan bangunan. Selain itu juga dilakukan untuk mempercantik muka/tampilan dari bangunan.
+
+            </>
+
         },
         {
             no: 3,
@@ -63,13 +79,13 @@ const Services = () => {
         <div>
             <div className={`${styles.pageSize} bg-[#11468F] bg-contain max-w-full lg:content-center`} style={{ backgroundImage: "url('/images/services-background/line.svg')" }}>
                 <Header title="Services" />
-                <div className="flex flex-col lg:flex-row lg:pb-20 lg:pt-8">
-                    <div className="lg:order-2 lg:w-1/2">
-                        <Image className="my-16 self-center mx-auto lg:content-center max-w-full xl:max-w-none  xl:w-[700px] lg:my-0" src={buildingLineart} alt="" />
+                <div className="flex flex-col lg:flex-row mb-24 lg:mt-8 w-full gap-8 lg:justify-between">
+                    <div className="lg:order-2">
+                        <Image className="m-auto self-center lg:max-w-none my-8 lg:w-full" src={buildingLineart} alt="" width={400} height={400}/>
                     </div>
-                    <div className="lg:order-1 lg:w-1/2 lg:content-center lg:pr-8">
+                    <div className="lg:order-1 lg:content-center lg:w-[800px]">
                         <h1 className={`text-5xl text-white font-semibold mb-8 md:text-6xl xl:text-8xl`}>Service <br/> We Provide</h1>
-                        <p className={`${styles.paragraph} text-white mb-10 lg:pr-12 xl:pr-24`}>{serviceCaption}</p>
+                        <p className={`${styles.paragraph} text-white lg:pr-12 xl:pr-12`}>{serviceCaption}</p>
                     </div>
                 </div>
             </div>
