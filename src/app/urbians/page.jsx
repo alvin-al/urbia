@@ -99,8 +99,8 @@ const Urbians = () => {
           </div>
         </div>
 
-        <div id="urbians-data">
-          <div className="border-t border-black pt-8 pb-12 flex gap-4 flex-col">
+        <div id="urbians-data" className="mb-20">
+          <div className="border-t border-black pt-8 pb-24 flex gap-4 flex-col">
             <h1 className={`${styles.headpoints5xl}`}>A team made of experts</h1>
             <p className="md:w-1/2">Urbia mengedepankan manifestasi ruang yang berfokus pada integrasi dari konteks dan kebutuhan pengguna ruang.</p>
           </div>
