@@ -17,6 +17,9 @@ export const footer = "font-semibold text-sm";
 export const paragraph = "font-regular text-base";
 export const display = "font-semibold text-lg";
 export const displayPhone = "font-semibold text-base";
+export const headpoints = "text-xl font-semibold";
+export const headpoints2xl = "text-2xl font-semibold";
+export const headpoints5xl = "font-semibold text-5xl";
 
 //Color
 export const bluePallete = "bg-[#11468F]";

@@ -134,3 +134,12 @@ body, main {
 .no-scroll {
   overflow: hidden;
 }
+
+.urbians-bg {
+  
+  background-image: url(/images/Giorno.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -1;
+}
