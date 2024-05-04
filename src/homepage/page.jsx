@@ -6,26 +6,27 @@ import Footer from '@/components/footer'
 import * as styles from '@/components/styles'
 
 
+
 const Homepage = () => {
   return (
     <div className={`${styles.pageSize} h-[100vh]`}>
         <div>
           <Header title='Home'/>
         </div>
-        <div>
-          <p className={`${styles.head} text-right`}>  
+        <div className='md:px-12'>
+          <div>
+            <p className={`${styles.head} text-right`}>  
             URBIA SPATIAL MANIFESTO
-          </p>
+            </p>
+          </div>
+          <div>
+            <HomeCarousel/>
+          </div>
+          <div>
+            <Social />
+          </div>
         </div>
-        <div>
-          <HomeCarousel/>
-        </div>
-        <div>
-          <Social />
-        </div>
-        <div>
-          <Footer/>
-        </div>
+        <Footer/>
     </div>
 
   )

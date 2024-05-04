@@ -77,9 +77,9 @@ const Services = () => {
 
     return (
         <div>
-            <div className={`${styles.pageSize} bg-[#11468F] bg-contain max-w-full lg:content-center  h-full`} style={{ backgroundImage: "url('/images/services-background/line.svg')"}}>
+            <div className={`${styles.pageSize} bg-[#11468F] bg-contain max-w-full lg:content-center  h-[110%] rounded-b-[36px]`} style={{ backgroundImage: "url('/images/services-background/line.svg')"}}>
                 <Header title="Services" />
-                <div className="flex flex-col lg:flex-row mb-24 lg:mt-8 w-full gap-8 lg:justify-between">
+                <div className="flex flex-col lg:flex-row mb-24 lg:mt-8 w-full gap-8 lg:justify-between md:px-12">
                     <div className="lg:order-2">
                         <Image className="m-auto self-center lg:max-w-none my-8 lg:w-full" src={buildingLineart} alt="" width={400} height={400}/>
                     </div>
@@ -91,7 +91,7 @@ const Services = () => {
             </div>
 
 
-            <div className={`${styles.pageSize} mt-6 mb-24`}>
+            <div className={`${styles.pageSize} mt-6 mb-24 md:px-16`}>
                 <Accordion type="single" collapsible>                    
                     {itemsContent.map((item, index) => (
                         <Items key={index} no={itemsContent[index].no} title={itemsContent[index].title} caption={itemsContent[index].caption} />

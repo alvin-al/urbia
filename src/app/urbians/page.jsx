@@ -12,7 +12,9 @@ import devDep from '@/../../public/images/partners-logo/dev-dep.svg'
 import urbLiving from '@/../../public/images/partners-logo/urb-living.svg'
 import urbiaLogo from '@/../../public/images/partners-logo/urbia.svg'
 import Affordability from "@/components/affordability";
-import arrow from "@/../../public/icons/arrow-icon.svg"
+import arrow from "@/../../public/icons/arrow-icon.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 const Urbians = () => {
   const members = [
@@ -71,10 +73,11 @@ const Urbians = () => {
 
   return (
     <div className={`${styles.pageSize} flex border`}>
-        <div className="h-[90vh] flex flex-col justify-between">
-          <div>
+        <div>
             <Header title='Urbians' />
           </div>
+
+        <div className="pt-[50vh] flex flex-col justify-between md:px-12">
           <div className="w-fit ">
             <h1 className={`${styles.mainHead} ${styles.blueText}`}>
               Hello<br/>We Are<br/>Urbians!
@@ -99,7 +102,7 @@ const Urbians = () => {
           </div>
         </div>
 
-        <div id="urbians-data" className="mb-20">
+        <div id="urbians-data" className="mb-20  md:px-12">
           <div className="border-t border-black pt-8 pb-24 flex gap-4 flex-col">
             <h1 className={`${styles.headpoints5xl}`}>A team made of experts</h1>
             <p className="md:w-1/2">Urbia tidak bekerja sendiri, klien, vendor, kontraktor, studio, workshop, partner, dan pihak lain juga berpartisipasi dalam keberhasilan project. Tentu saja, Urbia memiliki partner dan relasi dengan latar belakang profesional dan terpercaya. Keterbukaan menjadi kunci dalam proses Urbia mengakomodasi kebutuhan klien. </p>
@@ -115,24 +118,33 @@ const Urbians = () => {
           </div>
         </div>
 
-        <div id="contact-us" className="">
+        <div id="contact-us" className=" md:px-12">
           <h1 className={`${styles.headpoints5xl} mb-4`}>This is how we start the party</h1>
           <p className="md:w-1/2">Feel free to ask everything to us!</p>
-          <div className="py-4">
-            <div className="flex flex-col gap-4">
+          <div className="py-4 flex">
+            <div className="flex flex-col gap-4 md:w-1/2">
               <input type="text" placeholder="[  Silakan tulis nama Anda ...  ]" className="w-full border-b-2 border-gray-800"/>
               <input type="email" placeholder="[  Silakan tulis e-mail Anda ...  ]" className="w-full border-b-2 border-gray-800"/>
               <input type="text" placeholder="[  Silakan beritahu kami, project atau apapun yang bisa kami kontribusikan untuk Anda ...  ]" className="flex w-full h-64 placeholder:text-wrap placeholder:text-start m-0 p-0 text-start border-b-2 border-gray-800"/>
 
-              <button type="submit" className="w-fit flex gap-4 items-center m-auto">
+              <button type="submit" className="hover:underline hover:underline-offset-2 w-fit flex gap-4 items-center m-auto">
                 <p className="hover:underline hover:underline-offset-2">Let’s Collaborate</p>
                 <div className="w-12 ">
                   <Image src={arrow} alt="arrow-icon" className=""/>
                 </div>
               </button>
-            </div>
+
               <p className="md:w-1/2 text-sm mt-4 text-center">Anda akan mendapatkan balasan email dari kami, segera.</p>
-            <div>
+            </div>
+
+            <div className=" h-96 md:w-1/2 pl-16">
+              <div className="flex gap-4">
+                <FontAwesomeIcon icon={faWhatsapp} className="w-12 h-12"/>
+                <div className="w-3/4">
+                  <h2 className={`${styles.display}`}>Hubungi kami langsung melalui nomor WA </h2>
+                  <p>Kami akan segera membalas pesan Anda untuk diskusi maupun konsultasi lebih lanjut</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
