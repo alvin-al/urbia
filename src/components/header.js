@@ -27,10 +27,10 @@ const Header = ({title}) => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-  const genericHamburgerLine = `h-[4px] w-6 my-[2px] rounded-full bg-black transition ease transform duration-300`;
+  const genericHamburgerLine = `h-[4px] w-6 my-[2px] rounded-full bg-black transition ease transform duration-300 z-50`;
 
   return (
-    <div className="flex h-[60px] items-center gap-2 z-0">
+    <div className="flex h-[60px] items-center gap-2 z-50">
       <title>{`${title} | Urbia`}</title>
       <link rel="icon" href="favicon.ico" type="image/x-icon" />
       <button 
