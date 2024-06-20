@@ -15,7 +15,7 @@ const Projects = () => {
 
   return(
     <div className={`${styles.pageSize} flex h-[120vh] z-0`}>
-        <Header title="projects" />
+        <Header title="Projects" />
         <p className={`${styles.head} text-right`}>  
             OUR PROJECTS
         </p>
