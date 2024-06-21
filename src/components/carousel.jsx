@@ -50,9 +50,9 @@ const HomeCarousel = () => {
         className="flex flex-col h-[73vh] xl:h-[76vh] rounded-lg border-red-100"
         >
         <CarouselContent>
-          <CarouselItem><Image src={pic1} alt="" className="rounded-lg object-cover w-full h-[73vh] xl:h-[76vh] object-bottom"/></CarouselItem>
-          <CarouselItem><Image src={pic2} alt="" className="rounded-lg object-cover w-full h-[73vh] xl:h-[76vh] object-bottom"/></CarouselItem>
-          <CarouselItem><Image src={pic3} alt="" className="rounded-lg object-cover w-full h-[73vh] xl:h-[76vh] object-bottom"/></CarouselItem>
+          <CarouselItem><Image src={pic1} alt="" className="rounded-lg object-cover w-full h-[73vh] xl:h-[76vh] object-bottom hover:cursor-pointer"/></CarouselItem>
+          <CarouselItem><Image src={pic2} alt="" className="rounded-lg object-cover w-full h-[73vh] xl:h-[76vh] object-bottom hover:cursor-pointer"/></CarouselItem>
+          <CarouselItem><Image src={pic3} alt="" className="rounded-lg object-cover w-full h-[73vh] xl:h-[76vh] object-bottom hover:cursor-pointer"/></CarouselItem>
         </CarouselContent>
       </Carousel>
       
