@@ -1,7 +1,10 @@
 import { Inter, Fraunces, Raleway } from "next/font/google";
 import "./globals.css";
 
-const raleway = Raleway({ subsets: ["latin"] });
+const raleway = Raleway({
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export const metadata = {
   title: "Urbia",
@@ -10,8 +13,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${raleway.className} `}>{children}</body>
+    <html lang="en" className={raleway.className}>
+      <body >{children}</body>
     </html>
   );
 }
