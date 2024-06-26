@@ -16,7 +16,7 @@ const Projects = () => {
   return(
     <div className={`${styles.pageSize} flex h-[120vh] z-0`}>
         <Header title="Projects" />
-        <p className={`${styles.head} text-right`}>  
+        <p className={`${styles.head} text-right mb-2`}>  
             OUR PROJECTS
         </p>
         <div id="projects" className="flex justify-center gap-5 ">
