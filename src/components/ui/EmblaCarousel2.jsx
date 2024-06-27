@@ -6,6 +6,7 @@ import {
   usePrevNextButtons
 } from './EmblaCarouselArrowButtons'
 import useEmblaCarousel from 'embla-carousel-react'
+import Image from 'next/image'
 
 const EmblaCarousel2 = (props) => {
   const { slides, options } = props
@@ -27,7 +28,7 @@ const EmblaCarousel2 = (props) => {
         <div className="embla__container">
           {slides.map((slides, index) => (
           <div className="embla__slide" key={index}>
-            <img src={slides.src} alt={`Slide ${index + 1}`} />
+            <Image width={2000} height={2000} src={slides.src} alt={`Slide ${index + 1}`} />
           </div>
         ))}
         </div>
