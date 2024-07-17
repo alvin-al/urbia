@@ -1,19 +1,24 @@
-import React, { useEffect } from 'react';
-import { DotButton, useDotButton } from './EmblaCarouselDotButton';
-import { PrevButton, NextButton, usePrevNextButtons } from './EmblaCarouselArrowButtons';
-import useEmblaCarousel from 'embla-carousel-react';
-import Image from 'next/image';
+import React, { useEffect, useState } from "react";
+import { DotButton, useDotButton } from "./EmblaCarouselDotButton";
+import {
+  PrevButton,
+  NextButton,
+  usePrevNextButtons,
+} from "./EmblaCarouselArrowButtons";
+import useEmblaCarousel from "embla-carousel-react";
+import Image from "next/image";
 
-const EmblaCarousel2 = ({ slides = [], options }) => {
+const EmblaCarousel2 = ({ slides, options }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
 
-  const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi);
+  const { selectedIndex, scrollSnaps, onDotButtonClick } =
+    useDotButton(emblaApi);
 
   const {
     prevBtnDisabled,
     nextBtnDisabled,
     onPrevButtonClick,
-    onNextButtonClick
+    onNextButtonClick,
   } = usePrevNextButtons(emblaApi);
 
   useEffect(() => {
@@ -23,13 +28,24 @@ const EmblaCarousel2 = ({ slides = [], options }) => {
   }, [emblaApi]);
 
   return (
-    <section className="embla">
-      <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container">
+    <section className='embla'>
+      <div className='embla__viewport' ref={emblaRef}>
+        <div className='embla__container'>
           {Array.isArray(slides) && slides.length > 0 ? (
-            slides.map((slide, index) => (
-              <div className="embla__slide" key={index}>
-                <Image width={2000} height={2000} src={slide.src} alt={`Slide ${index + 1}`} />
+            slides.map((slides, index) => (
+              <div className={`embla__slide relative`} key={index}>
+                <div className={`z-10 absolute w-full h-full text-2xl font-semibold opacity-0 hover:opacity-100 hover:bg-black rounded-xl hover:bg-opacity-70 text-white hover:delay-50 flex justify-center items-center hover:transition`}>
+                  {slides.title}
+                </div>
+                <div className='w-full h-full relative overflow-hidden rounded-xl'>
+                  <Image
+                    width={2000}
+                    height={2000}
+                    src={slides.src}
+                    alt={`Slide ${index + 1}`}
+                    className='object-cover w-full h-full'
+                  />
+                </div>
               </div>
             ))
           ) : (
@@ -38,8 +54,8 @@ const EmblaCarousel2 = ({ slides = [], options }) => {
         </div>
       </div>
 
-      <div className="embla__controls">
-        <div className="embla__buttons">
+      <div className='embla__controls'>
+        <div className='embla__buttons'>
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
         </div>
