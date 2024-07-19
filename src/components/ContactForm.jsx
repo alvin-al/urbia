@@ -24,14 +24,14 @@ function ContactForm() {
         type='email'
         name='email'
         placeholder='Silahkan tulis email anda'
-        className='w-full border-b-2 border-gray-800 h-8 p-4 mb-2'
+        className='w-full border-b-2 border-gray-800 h-8 p-4 mb-2 focus:outline-none'
       />
       <ValidationError prefix='Email' field='email' errors={state.errors} />
       <textarea
         id='message'
         name='message'
         placeholder='Beritahu kami projek atau apapun yang bisa kami kontribusikan untuk Anda'
-        className='flex w-full h-64 placeholder:text-wrap placeholder:text-start mb-2 text-start border-b-2 border-gray-800 p-4'
+        className='flex w-full h-64 placeholder:text-wrap placeholder:text-start mb-2 text-start border-b-2 border-gray-800 p-4 focus:outline-none'
       />
       <ValidationError prefix='Message' field='message' errors={state.errors} />
       <button
