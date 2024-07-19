@@ -14,7 +14,16 @@ import urbiaLogo from "@/../../public/images/partners-logo/urbia.svg";
 import Affordability from "@/components/affordability";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import {
+  FaInstagram,
+  FaWhatsapp,
+  FaWpforms,
+  FaLinkedinIn,
+  FaHandshake,
+  FaMedium,
+} from "react-icons/fa6";
 import ContactForm from "@/components/ContactForm";
+import ContactDescription from "@/components/ContactDescription";
 
 const Urbians = () => {
   const members = [
@@ -34,7 +43,6 @@ const Urbians = () => {
       position: "LEAD  ARCHITECT",
     },
   ];
-
   const keterjangkauan = [
     {
       title: "People",
@@ -55,7 +63,6 @@ const Urbians = () => {
       number: "+28",
     },
   ];
-
   const partners = [
     {
       name: "urbiaLogo",
@@ -72,6 +79,38 @@ const Urbians = () => {
     {
       name: "urbLiving",
       src: urbLiving,
+    },
+  ];
+  const contactDescContent = [
+    {
+      title: "Hubungi kami langsung melalui nomor WA",
+      desc: "Kami akan segera membalas pesan Anda untuk diskusi maupun konsultasi lebih lanjut",
+      icon: FaWhatsapp,
+    },
+    {
+      title: "Follow kami di Instagram",
+      desc: "Terhubung dengan kami, lihat aktivitas, dan dapatkan informasi terbaru kami di Instagram",
+      icon: FaInstagram,
+    },
+    {
+      title: "Langsung isi form penilaian kami",
+      desc: "Dengan mengisi form penilaian dari kami, Anda membantu kami untuk mengidentifikasi kebutuhan project Anda",
+      icon: FaWpforms,
+    },
+    {
+      title: "Silakan lihat halaman profil kami di LinkedIn",
+      desc: "Anda dapat terhubung dan melihat halaman profil Urbia studio",
+      icon: FaLinkedinIn,
+    },
+    {
+      title: "Dapatkan Profil Perusahaan kami",
+      desc: "Anda dapat melihat profil perusahaan Urbia untuk keperluan bisnis maupun kerjasama",
+      icon: FaHandshake,
+    },
+    {
+      title: "Baca tulisan kami juga melalui Medium",
+      desc: "Dukung kami untuk terus mengembangkan berbagai keterjangkauan literasi dengan membaca berbagai ulasan dan artikel terkait arsitektur oleh Urbia",
+      icon: FaMedium,
     },
   ];
 
@@ -147,58 +186,19 @@ const Urbians = () => {
           This is how we start the party
         </h1>
         <p className='md:w-1/2'>Feel free to ask everything to us!</p>
-        <div className='py-4 flex'>
-          {/* <div className='flex flex-col gap-4 md:w-1/2'>
-            <input
-              type='text'
-              placeholder='[  Silakan tulis nama Anda ...  ]'
-              className='w-full border-b-2 border-gray-800'
-            />
-            <input
-              type='email'
-              placeholder='[  Silakan tulis e-mail Anda ...  ]'
-              className='w-full border-b-2 border-gray-800'
-            />
-            <input
-              type='text'
-              placeholder='[  Silakan beritahu kami, project atau apapun yang bisa kami kontribusikan untuk Anda ...  ]'
-              className='flex w-full h-64 placeholder:text-wrap placeholder:text-start m-0 p-0 text-start border-b-2 border-gray-800'
-            />
-
-            <button
-              type='submit'
-              className='hover:underline hover:underline-offset-2 w-fit flex gap-4 items-center m-auto'
-            >
-              <p className='hover:underline hover:underline-offset-2'>
-                Let’s Collaborate
-              </p>
-              <div className='w-12 '>
-                <Image src={arrow} alt='arrow-icon' className='' />
-              </div>
-            </button>
-
-            <p className='md:w-1/2 text-sm mt-4 text-center'>
-              Anda akan mendapatkan balasan email dari kami, segera.
-            </p>
-          </div> */}
-
-          <div className='flex flex-col gap-4 md:w-1/2'>
+        <div className='py-4 flex gap-12 mb-8'>
+          <div className='flex flex-col gap-4 md:w-1/2 pr-32'>
             <ContactForm />
           </div>
-
-          <div className=' h-96 md:w-1/2 pl-16'>
-            <div className='flex gap-4'>
-              <FontAwesomeIcon icon={faWhatsapp} className='w-12 h-12' />
-              <div className='w-3/4'>
-                <h2 className={`${styles.display}`}>
-                  Hubungi kami langsung melalui nomor WA{" "}
-                </h2>
-                <p>
-                  Kami akan segera membalas pesan Anda untuk diskusi maupun
-                  konsultasi lebih lanjut
-                </p>
-              </div>
-            </div>
+          <div className='h-fit md:w-1/2 flex gap-6 flex-col'>
+            {contactDescContent.map((content, index) => (
+              <ContactDescription
+                title={contactDescContent[index].title}
+                icon={contactDescContent[index].icon}
+                desc={contactDescContent[index].desc}
+                key={index}
+              />
+            ))}
           </div>
         </div>
       </div>
