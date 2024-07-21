@@ -158,14 +158,9 @@ const Services = () => {
           orang yang terbuka wawasannya. Terlebih lagi, kami memiliki tujuan
           dalam bertemu dengan pihak-pihak dan komunitas yang memiliki tujuan
           dan semangat yang berkaitan satu sama lain.
-        </>
-      ),
-    },
-    {
-      no: 6,
-      title: "Development and Deploy",
-      caption: (
-        <>
+          <br /><br />
+          <h2 className="font-bold">Development and Deploy</h2>
+          <br />
           Pandangan ini perlunya untuk juga diketahui oleh kalangan yang lebih
           luas, tidak hanya berputar pada Urbia saja. Kedepannya, proses ini
           dapat disebarluaskan dengan memanfaatkan media cetak maupun digital
