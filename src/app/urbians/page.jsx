@@ -59,7 +59,7 @@ const Urbians = () => {
     {
       title: "Project",
       content:
-        "Urbia telah mengerjakan project di berbagai lokasi. Masing-masing memiliki konteks dan masalah yang berbeda. Urbia memperhatikan kondisi lokasi dimulai dari mikro site hingga makro kawasan/daerah dimana lokasi project berada.",
+        "Urbia telah mengerjakan berbagai jenis project dan pekerjaan yang berkaitan dengan keruangan hingga properti. Tentunya adanya klien yang sangat partisipatif juga merupakan aspek yang ikut mendorong Urbia untuk terus meningkatkan kualitas desain.",
       number: "+28",
     },
   ];
