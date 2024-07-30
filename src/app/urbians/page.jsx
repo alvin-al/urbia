@@ -12,8 +12,6 @@ import devDep from "@/../../public/images/partners-logo/dev-dep.svg";
 import urbLiving from "@/../../public/images/partners-logo/urb-living.svg";
 import urbiaLogo from "@/../../public/images/partners-logo/urbia.svg";
 import Affordability from "@/components/affordability";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import {
   FaInstagram,
   FaWhatsapp,
