@@ -47,6 +47,7 @@ const posts = () => {
   return (
     <div className={`${styles.pageSize} flex`}>
       <Header title={contentInside[0].projectTitle} />
+      <meta name='description' content={contentInside[0].projectTitle}></meta>
       <Image
         src={giorno}
         className='relative w-full md:h-[75vh] object-cover rounded-b-[36px]'
