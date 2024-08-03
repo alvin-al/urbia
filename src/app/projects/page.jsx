@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Header from "@/components/header";
 import * as styles from "@/components/styles";
@@ -14,6 +14,7 @@ const Projects = () => {
   const [posts, setPosts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const isDefaultCategorySet = useRef(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -42,8 +43,9 @@ const Projects = () => {
       : posts.filter((post) => post.fields.category === selectedCategory);
 
   useEffect(() => {
-    if (categories.length > 0 && selectedCategory === null) {
+    if (categories.length > 0 && !isDefaultCategorySet.current) {
       setSelectedCategory(categories[0]);
+      isDefaultCategorySet.current = true;
     }
   }, [categories]);
 

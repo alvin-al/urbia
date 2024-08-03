@@ -51,7 +51,7 @@ const EmblaCarousel2 = ({ slides, options }) => {
               </div>
             ))
           ) : (
-            <div>No slides available</div>
+            <div></div>
           )}
         </div>
       </div>
