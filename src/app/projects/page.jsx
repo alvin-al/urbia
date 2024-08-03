@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Header from "@/components/header";
 import * as styles from "@/components/styles";
@@ -7,14 +7,13 @@ import Footer from "@/components/footer";
 import ProjectSidebar from "@/components/projectSidebar";
 import Link from "next/link";
 import ProjectContentSlider from "@/components/projectContentSlider";
-import client from "../../lib/contentful"; // Pastikan ini diimpor dengan benar
+import client from "../../lib/contentful";
 
 const Projects = () => {
   const OPTIONS = { loop: true };
   const [posts, setPosts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
-  const isDefaultCategorySet = useRef(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -33,21 +32,23 @@ const Projects = () => {
     fetchData();
   }, []);
 
-  const handleCategoryChange = (category) => {
+  const handleCategoryChange = useCallback((category) => {
     setSelectedCategory(category);
-  };
-
-  const filteredPosts =
-    selectedCategory === "All"
-      ? posts
-      : posts.filter((post) => post.fields.category === selectedCategory);
+  }, []);
 
   useEffect(() => {
-    if (categories.length > 0 && !isDefaultCategorySet.current) {
+    if (categories.length > 0 && selectedCategory === null) {
       setSelectedCategory(categories[0]);
-      isDefaultCategorySet.current = true;
     }
-  }, [categories]);
+  }, [categories, selectedCategory]);
+
+  const filteredPosts = useCallback(
+    () =>
+      selectedCategory === null || selectedCategory === "All"
+        ? posts
+        : posts.filter((post) => post.fields.category === selectedCategory),
+    [posts, selectedCategory]
+  );
 
   return (
     <div className={`${styles.pageSize} flex h-[120vh] z-0`}>
@@ -61,7 +62,7 @@ const Projects = () => {
         />
         <ProjectContentSlider
           category={selectedCategory || "All"}
-          slides={filteredPosts}
+          slides={filteredPosts()}
           options={OPTIONS}
         />
       </div>
