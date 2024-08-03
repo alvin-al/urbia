@@ -33,15 +33,17 @@ const EmblaCarousel2 = ({ slides, options }) => {
         <div className='embla__container'>
           {Array.isArray(slides) && slides.length > 0 ? (
             slides.map((slides, index) => (
-              <div className={`embla__slide relative`} key={index}>
-                <div className={`z-10 absolute w-full h-full text-2xl font-semibold opacity-0 hover:opacity-100 hover:bg-black rounded-xl hover:bg-opacity-70 text-white hover:delay-50 flex justify-center items-center hover:transition`}>
-                  {slides.title}
+              <div className={`embla__slide relative`} key={slides.sys.id}>
+                <div
+                  className={`z-10 absolute w-full h-full text-2xl font-semibold opacity-0 hover:opacity-100 hover:bg-black rounded-xl hover:bg-opacity-70 text-white hover:delay-50 flex justify-center items-center hover:transition`}
+                >
+                  {slides.fields.title}
                 </div>
                 <div className='w-full h-full relative overflow-hidden rounded-xl'>
                   <Image
                     width={2000}
                     height={2000}
-                    src={slides.src}
+                    src={`https:${slides.fields.mainImage.fields.file.url}`}
                     alt={`Slide ${index + 1}`}
                     className='object-cover w-full h-full'
                   />
