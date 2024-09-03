@@ -1,0 +1,280 @@
+{
+  "sys": {
+    "type": "Array"
+  },
+  "total": 1,
+  "skip": 0,
+  "limit": 100,
+  "items": [
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "sqxv0civ01pv"
+          }
+        },
+        "id": "2r9EiuLojGASWBkYtxXJ6W",
+        "type": "Entry",
+        "createdAt": "2024-08-02T11:16:14.905Z",
+        "updatedAt": "2024-08-02T11:16:14.905Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "projects"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "Corporate HQ",
+        "slug": "corporate-hq",
+        "category": "Office",
+        "mainImage": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "6tttoUfuyIbRUB6CVNri3"
+          }
+        },
+        "location": "Yk",
+        "projectClient": "Alv",
+        "projectSiteArea": "20",
+        "projectBuildingArea": "20",
+        "projectDescription1": {
+          "data": {},
+          "content": [
+            {
+              "data": {},
+              "content": [
+                {
+                  "data": {},
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ],
+                  "value": "Lorem Ipsum",
+                  "nodeType": "text"
+                },
+                {
+                  "data": {},
+                  "marks": [],
+                  "value": " is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. ",
+                  "nodeType": "text"
+                }
+              ],
+              "nodeType": "paragraph"
+            }
+          ],
+          "nodeType": "document"
+        },
+        "projectDescription2": {
+          "data": {},
+          "content": [
+            {
+              "data": {},
+              "content": [
+                {
+                  "data": {},
+                  "marks": [],
+                  "value": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.",
+                  "nodeType": "text"
+                }
+              ],
+              "nodeType": "paragraph"
+            }
+          ],
+          "nodeType": "document"
+        },
+        "projectDescription3": {
+          "data": {},
+          "content": [
+            {
+              "data": {},
+              "content": [
+                {
+                  "data": {},
+                  "marks": [],
+                  "value": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+                  "nodeType": "text"
+                }
+              ],
+              "nodeType": "paragraph"
+            }
+          ],
+          "nodeType": "document"
+        },
+        "projectGallery": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "6tttoUfuyIbRUB6CVNri3"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "5x3HAaLEXEBmgNZ9PZSMR9"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "62p1kLbjjiP0ohRP5jLujY"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "includes": {
+    "Asset": [
+      {
+        "metadata": {
+          "tags": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "sqxv0civ01pv"
+            }
+          },
+          "id": "5x3HAaLEXEBmgNZ9PZSMR9",
+          "type": "Asset",
+          "createdAt": "2024-07-11T04:55:18.756Z",
+          "updatedAt": "2024-07-11T04:55:18.756Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-US"
+        },
+        "fields": {
+          "title": "images",
+          "description": "",
+          "file": {
+            "url": "//images.ctfassets.net/sqxv0civ01pv/5x3HAaLEXEBmgNZ9PZSMR9/2c0400b088f02d109f7806bbf7aea167/images",
+            "details": {
+              "size": 43627,
+              "image": {
+                "width": 656,
+                "height": 369
+              }
+            },
+            "fileName": "images",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "sqxv0civ01pv"
+            }
+          },
+          "id": "62p1kLbjjiP0ohRP5jLujY",
+          "type": "Asset",
+          "createdAt": "2024-07-19T10:29:30.156Z",
+          "updatedAt": "2024-07-19T10:29:30.156Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-US"
+        },
+        "fields": {
+          "title": "render ext 4 - Photo",
+          "description": "",
+          "file": {
+            "url": "//images.ctfassets.net/sqxv0civ01pv/62p1kLbjjiP0ohRP5jLujY/39d542e3ea82eed9c7f65a53117b6791/render_ext_4_-_Photo.jpg",
+            "details": {
+              "size": 737309,
+              "image": {
+                "width": 1280,
+                "height": 720
+              }
+            },
+            "fileName": "render ext_4 - Photo.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "sqxv0civ01pv"
+            }
+          },
+          "id": "6tttoUfuyIbRUB6CVNri3",
+          "type": "Asset",
+          "createdAt": "2024-07-19T10:25:32.360Z",
+          "updatedAt": "2024-07-19T10:25:32.360Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-US"
+        },
+        "fields": {
+          "title": "render ext 6 - Photo",
+          "description": "",
+          "file": {
+            "url": "//images.ctfassets.net/sqxv0civ01pv/6tttoUfuyIbRUB6CVNri3/9990d7ea0a6ad8538ad8a5f7eb284ef5/render_ext_6_-_Photo.jpg",
+            "details": {
+              "size": 958339,
+              "image": {
+                "width": 1280,
+                "height": 720
+              }
+            },
+            "fileName": "render ext_6 - Photo.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    ]
+  }
+}

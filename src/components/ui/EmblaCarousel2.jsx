@@ -7,6 +7,7 @@ import {
 } from "./EmblaCarouselArrowButtons";
 import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const EmblaCarousel2 = ({ slides, options }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
@@ -34,20 +35,22 @@ const EmblaCarousel2 = ({ slides, options }) => {
           {Array.isArray(slides) && slides.length > 0 ? (
             slides.map((slides, index) => (
               <div className={`embla__slide relative`} key={slides.sys.id}>
-                <div
-                  className={`z-10 absolute w-full h-full text-2xl font-semibold opacity-0 hover:opacity-100 hover:bg-black rounded-xl hover:bg-opacity-70 text-white hover:delay-50 flex justify-center items-center hover:transition`}
-                >
-                  {slides.fields.title}
-                </div>
-                <div className='w-full h-full relative overflow-hidden rounded-xl'>
-                  <Image
-                    width={2000}
-                    height={2000}
-                    src={`https:${slides.fields.mainImage.fields.file.url}`}
-                    alt={`Slide ${index + 1}`}
-                    className='object-cover w-full h-full'
-                  />
-                </div>
+                <Link href={`/projects/${slides.fields.slug}`}>
+                  <div
+                    className={`z-10 absolute w-full h-full text-2xl font-semibold opacity-0 hover:opacity-100 hover:bg-black rounded-xl hover:bg-opacity-70 text-white hover:delay-50 flex justify-center items-center hover:transition`}
+                  >
+                    {slides.fields.title}
+                  </div>
+                  <div className='w-full h-full relative overflow-hidden rounded-xl'>
+                    <Image
+                      width={2000}
+                      height={2000}
+                      src={`https:${slides.fields.mainImage.fields.file.url}`}
+                      alt={`Slide ${index + 1}`}
+                      className='object-cover w-full h-full'
+                    />
+                  </div>
+                </Link>
               </div>
             ))
           ) : (
