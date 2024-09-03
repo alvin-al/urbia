@@ -8,39 +8,51 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
-const Page = () => {
+
+const postPage = () => {
+  const contentful = require('contentful')
   const pathname = usePathname();
-  const slug = pathname.replace(/\/projects?\//i, "");
+  const slug = pathname.replace('/projects/', '');
   const [post, setPost] = useState(null);
+  const [loading, setLoading] = useState(true);
+// Suggested code may be subject to a license. Learn more: ~LicenseLog:2306169735.
+  const client = contentful.createClient({
+    space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
+    accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
+  });
 
   useEffect(() => {
-    const fetchPost = async () => {
-      try {
-        const response = await fetch(
-          `https://cdn.contentful.com/spaces/sqxv0civ01pv/environments/master/entries?access_token=a1LbwIx0L4v4Y1L7Eo8Bl5rlaBRMjSwEFWEgzyA7qag&content_type=projects&fields.slug=${slug}`
-        );
-        const data = await response.json();
-        setPost(data.items[0]);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchPost();
+    client.getEntries({
+      'content_type': 'projects',
+      'fields.slug': slug,
+    })
+      .then((response) => {
+        if (response.items.length > 0) {
+          setPost(response.items[0]);
+          setLoading(false);
+          console.log(post)
+        } else {
+          setPost(null);
+          setLoading(false);
+        }
+      })
+      .catch(console.error);
   }, [slug]);
 
-  if (!post) {
-    return <div>Loading...</div>;
+  if(loading){
+    return <div>wait</div>
   }
 
+  console.log(post)
+  const mainImageUrl = post.fields.mainImage.fields.file.url;
+  const imageGallery1 = post.fields.projectGallery[0].fields.file.url;
+  const imageGallery2 = post.fields.projectGallery[1].fields.file.url;
+
   return (
-    <div className={`${styles.pageSize} flex`}>
+    <div className={`${styles.pageSize} flex border-2`}>
       <Header title={post.fields.title} />
       <meta name='description' content={post.fields.title}></meta>
-      <Image
-        src={giorno}
-        className='relative w-full md:h-[75vh] object-cover rounded-b-[36px]'
-        alt='giorno'
-      />
+      <Image src={`https:${mainImageUrl}`} alt={post.fields.title} className='relative w-full md:h-[75vh] object-cover rounded-b-[36px]' width={1000} height={1000} />
       <div className='mt-4 mb-12'>
         <h1 className={`${styles.headpoints5xl} uppercase`}>
           {post.fields.title}
@@ -61,12 +73,12 @@ const Page = () => {
           </div>
           <div className='flex justify-between border-b-2 py-4 border-gray-500 px-4'>
             <p className={`text-xl`}>SITE AREA</p>
-            <p className='font-bold text-xl'>{post.fields.projectSiteArea}</p>
+            <p className='font-bold text-xl'>{post.fields.projectSiteArea}m²</p>
           </div>
           <div className='flex justify-between py-4 border-gray-500 px-4'>
             <p className={`text-xl`}>BUILDING AREA</p>
             <p className='font-bold text-xl'>
-              {post.fields.projectBuildingArea}
+              {post.fields.projectBuildingArea}m²
             </p>
           </div>
         </div>
@@ -80,15 +92,14 @@ const Page = () => {
             {documentToReactComponents(post.fields.projectDescription2)}
           </div>
           <div className='relative'>
-            <Image
+            {/* <Image
               src={`https:${post.fields.mainImage.file.url}.jpg`}
               className='relative w-full h-full object-cover z-0'
               alt='giorno'
               width={1000}
               height={1000}
-            />
+            /> */}
           </div>
-          {console.log(post.fields.mainImage.file.url)}
           <div id='projectIntroduction'>
             <h2 className='font-bold mb-2'>Architectural Approach</h2>
             {documentToReactComponents(post.fields.projectDescription3)}
@@ -100,26 +111,32 @@ const Page = () => {
         <div className='w-1/2 pr-36 pl-12 pt-12 flex flex-col gap-12'></div>
       </div>
       <div className='w-1/2 h-fit mb-8'>
-        <Image src={giorno} alt='giorno' className='object-cover h-96' />
+        <Image src={`https:${imageGallery1}`} alt='giorno' className='object-cover h-96' width={500} height={500}/>
       </div>
       <div className='flex h-fit w-full gap-4 mb-8'>
         <div>
-          <Image src={giorno} alt='giorno' className='h-64 object-cover' />
+        <Image src={`https:${imageGallery2}`} alt='giorno' className='h-64 object-cover' width={500} height={500}/>
         </div>
         <div>
-          <Image src={giorno} alt='giorno' className='h-64 object-cover' />
+          <Image src={giorno} alt='giorno' className='h-64 object-cover' width={500} height={500}/>
         </div>
         <div>
-          <Image src={giorno} alt='giorno' className='h-64 object-cover' />
+          <Image src={giorno} alt='giorno' className='h-64 object-cover' width={500} height={500}/>
         </div>
       </div>
-      <div className='w-full h-fit mb-8 flex flex-row gap-4'>
-        <Image src={giorno} alt='giorno' className='object-cover h-96' />
-        <Image src={giorno} alt='giorno' className='object-cover h-96' />
+      <div className='w-full h-fit mb-8 flex gap-4'>
+        <div className='object-cover w-1/2' >
+        <Image src={giorno} alt='giorno'/>
+        </div>
+        <div className='object-cover w-1/2' >
+        <Image src={giorno} alt='giorno'/>
+        </div>
       </div>
       <div className='w-full h-fit mb-8 flex gap-4  '>
         <div className='w-1/2'></div>
-        <Image src={giorno} alt='giorno' className='object-cover h-96 w-1/2' />
+        <div className='object-cover h-96 w-1/2' >
+        <Image src={giorno} alt='giorno'/>
+        </div>
       </div>
       <div className=''>
         <Footer />
@@ -128,4 +145,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default postPage;
