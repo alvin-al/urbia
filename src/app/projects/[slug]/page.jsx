@@ -9,8 +9,7 @@ import { usePathname } from "next/navigation";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import client from "@/lib/contentful";
 
-
-const postPage = () => {
+const PostPage = () => {
   const pathname = usePathname();
   const slug = pathname.replace("/projects/", "");
   const [post, setPost] = useState(null);
@@ -30,14 +29,20 @@ const postPage = () => {
         setLoading(false);
       }
     })
-    .catch(console.error);
-  }, []);
+    .catch((error) => {
+      console.error("Error fetching post:", error);
+      setLoading(false);
+    });
+  }, [client, slug]);
 
   if (loading) {
-    return <div>wait</div>;
+    return <div>Loading...</div>;
   }
 
-  console.log(post)
+  if (!post) {
+    return <div>Post not found.</div>;
+  }
+
   const mainImageUrl = post.fields.mainImage.fields.file.url;
   const imageGallery1 = post.fields.projectGallery[0].fields.file.url;
   const imageGallery2 = post.fields.projectGallery[1].fields.file.url;
@@ -139,4 +144,4 @@ const postPage = () => {
   );
 };
 
-export default postPage;
+export default PostPage;
