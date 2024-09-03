@@ -7,40 +7,34 @@ import Footer from "@/components/footer";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import client from "@/lib/contentful";
 
 
 const postPage = () => {
-  const contentful = require('contentful')
   const pathname = usePathname();
-  const slug = pathname.replace('/projects/', '');
+  const slug = pathname.replace("/projects/", "");
   const [post, setPost] = useState(null);
   const [loading, setLoading] = useState(true);
-// Suggested code may be subject to a license. Learn more: ~LicenseLog:2306169735.
-  const client = contentful.createClient({
-    space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
-    accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
-  });
 
   useEffect(() => {
     client.getEntries({
-      'content_type': 'projects',
-      'fields.slug': slug,
+      "content_type": "projects",
+      "fields.slug": slug,
     })
-      .then((response) => {
-        if (response.items.length > 0) {
-          setPost(response.items[0]);
-          setLoading(false);
-          console.log(post)
-        } else {
-          setPost(null);
-          setLoading(false);
-        }
-      })
-      .catch(console.error);
-  }, [slug]);
+    .then((response) => {
+      if (response.items.length > 0) {
+        setPost(response.items[0]);
+        setLoading(false);
+      } else {
+        setPost(null);
+        setLoading(false);
+      }
+    })
+    .catch(console.error);
+  }, []);
 
-  if(loading){
-    return <div>wait</div>
+  if (loading) {
+    return <div>wait</div>;
   }
 
   console.log(post)
