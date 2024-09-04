@@ -49,22 +49,22 @@ const ProjectPage = () => {
     return <div>Post not found.</div>;
   }
 
-  console.log(post);
-
   const mainImageUrl = post.fields.mainImage.fields.file.url;
 
   return (
     <div className={`${styles.pageSize} flex border-2`}>
       <Header title={post.fields.title} />
       <meta name='description' content={post.fields.title}></meta>
-      <Image
-        src={`https:${mainImageUrl}`}
-        alt={post.fields.title}
-        className='relative w-full md:h-[75vh] object-cover rounded-b-[36px]'
-        width={1000}
-        height={1000}
-        priority={true}
-      />
+      <div className='relative w-full h-[75vh]'>
+        <Image
+          src={`https:${mainImageUrl}`}
+          alt={post.fields.title}
+          width={1000}
+          height={1000}
+          className='relative w-full h-auto md:h-[75vh] object-cover rounded-b-[36px]'
+          priority={true}
+        />
+      </div>
       <div className='mt-4 mb-12'>
         <h1 className={`${styles.headpoints5xl} uppercase`}>
           {post.fields.title}
@@ -104,13 +104,13 @@ const ProjectPage = () => {
             {documentToReactComponents(post.fields.projectDescription2)}
           </div>
           <div className='relative'>
-            {/* <Image
-              src={`https:${post.fields.mainImage.file.url}.jpg`}
+            <Image
+              src={`https:${mainImageUrl}`}
               className='relative w-full h-full object-cover z-0'
               alt='giorno'
               width={1000}
               height={1000}
-            /> */}
+            />
           </div>
           <div id='projectIntroduction'>
             <h2 className='font-bold mb-2'>Architectural Approach</h2>
