@@ -54,8 +54,8 @@ const HomeCarousel = () => {
 
   if(loading){
     return (
-      <div className="flex flex-col h-[72vh] 2xl:h-[76vh] rounded-xl my-2">
-        <Skeleton className="w-full h-[73vh] xl:h-[76vh]" />
+      <div className="flex flex-col h-[72vh] 2xl:h-[75vh] rounded-xl my-2">
+        <Skeleton className="w-full h-[72vh] 2xl:h-[75vh]" />
       </div>
     )
   }
@@ -84,7 +84,7 @@ const HomeCarousel = () => {
               <Link href={`/projects/${item.fields.slug}`} key={item.sys.id}>
                 <Image src={`https:${item.fields.mainImage.fields.file.url}`} 
                 alt={item.fields.mainImage.fields.description || "image"} 
-                className="object-cover w-full h-[73vh] xl:h-[76vh] object-bottom hover:cursor-pointer" width={1000} height={1000}/>
+                className="object-cover w-full h-[72vh] 2xl:h-[75vh] object-bottom hover:cursor-pointer" width={1000} height={1000}/>
               </Link>
             </CarouselItem>
 ))}
