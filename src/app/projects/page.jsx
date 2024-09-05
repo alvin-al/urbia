@@ -8,12 +8,14 @@ import ProjectSidebar from "@/components/projectSidebar";
 import Link from "next/link";
 import ProjectContentSlider from "@/components/projectContentSlider";
 import client from "../../lib/contentful";
+import { PuffLoader } from "react-spinners";
 
 const Projects = () => {
   const OPTIONS = { loop: true };
   const [posts, setPosts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -22,6 +24,7 @@ const Projects = () => {
       });
 
       setPosts(response.items);
+      setLoading(false);
 
       const uniqueCategories = [
         ...new Set(response.items.map((item) => item.fields.category)),
@@ -31,6 +34,7 @@ const Projects = () => {
 
     fetchData();
   }, []);
+
 
   const handleCategoryChange = useCallback((category) => {
     setSelectedCategory(category);
@@ -50,11 +54,19 @@ const Projects = () => {
     [posts, selectedCategory]
   );
 
+  if (loading) {
+    return (
+      <div className='w-full h-[100vh] justify-center items-center flex'>
+        <PuffLoader />
+      </div>
+    );
+  }
+
   return (
-    <div className={`${styles.pageSize} flex h-[120vh] z-0`}>
+    <div className={`${styles.pageSize} flex z-0`}>
       <Header title='Projects' />
       <p className={`${styles.head} text-right mb-2`}>OUR PROJECTS</p>
-      <div id='projects' className='flex justify-center gap-5 '>
+      <div id='projects' className='flex justify-center gap-5 xl:max-h-[70vh] 2xl:max-h-full'>
         <ProjectSidebar
           categories={categories}
           setCategory={handleCategoryChange}
