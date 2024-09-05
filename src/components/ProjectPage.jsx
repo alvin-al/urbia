@@ -60,9 +60,9 @@ const ProjectPage = () => {
           src={`https:${mainImageUrl}`}
           alt={post.fields.title}
           width={1000}
-          height={1000}
+          height={600}
           className='relative w-full h-auto md:h-[75vh] object-cover rounded-b-[36px]'
-          priority={true}
+          priority
         />
       </div>
       <div className='mt-4 mb-12'>
