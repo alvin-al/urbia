@@ -59,7 +59,7 @@ const HomeCarousel = () => {
                 <Image
                   src={`https:${item.fields.mainImage.fields.file.url}`}
                   alt={item.fields.mainImage.fields.description || "image"}
-                  title={item.fields.title || "image"}
+                  title={`Project: ${item.fields.title}`}
                   className='object-cover w-full h-[72vh] 2xl:h-[75vh] object-bottom hover:cursor-pointer'
                   width={1000}
                   height={1000}
