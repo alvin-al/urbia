@@ -11,8 +11,7 @@ import {
 } from "@/components/ui/accordion";
 import Footer from "@/components/footer";
 
-const Services = () => {
-  const serviceCaption = `Urbia mengedepankan manifestasi ruang yang berfokus pada integrasi dari konteks dan kebutuhan pengguna ruang. Dalam mengolah kebutuhan desain, kami memandang klien sebagai kolaborator. Urbia mendorong aktivasi yang paritisipatif dalam pengambilan keputusan, memastikan bahwa kebutuhan dan preferensi Anda diakomodasi dengan baik dalam desain akhir. Membangun bersama Urbia tidak hanya mendapatkan produk perencanaan yang baik, namun juga pengalaman konsultasi tersebut memberikan nilai tambah yang signifikan. `;
+const serviceCaption = `Urbia mengedepankan manifestasi ruang yang berfokus pada integrasi dari konteks dan kebutuhan pengguna ruang. Dalam mengolah kebutuhan desain, kami memandang klien sebagai kolaborator. Urbia mendorong aktivasi yang paritisipatif dalam pengambilan keputusan, memastikan bahwa kebutuhan dan preferensi Anda diakomodasi dengan baik dalam desain akhir. Membangun bersama Urbia tidak hanya mendapatkan produk perencanaan yang baik, namun juga pengalaman konsultasi tersebut memberikan nilai tambah yang signifikan. `;
 
   const itemsContent = [
     {
@@ -170,6 +169,8 @@ const Services = () => {
     },
   ];
 
+const Services = () => {
+
   const Items = ({ no, title, caption }) => {
     return (
       <AccordionItem value={no} className='lg:pb-12 border-b-2 border-black'>
@@ -188,7 +189,7 @@ const Services = () => {
   return (
     <div>
       <div
-        className={`${styles.pageSize} bg-[#11468F] bg-contain max-w-full lg:content-center  h-[45rem] rounded-b-[36px]`}
+        className={`${styles.pageSize} bg-[#11468F] bg-contain max-w-full lg:content-center  xl:max-h-[90vh] rounded-b-[36px] pt-2`}
         style={{
           backgroundImage: "url('/images/services-background/line.svg')",
         }}
@@ -202,6 +203,7 @@ const Services = () => {
               alt=''
               width={400}
               height={400}
+              priority={true}
             />
           </div>
           <div className='lg:order-1 lg:content-center lg:w-[800px]'>

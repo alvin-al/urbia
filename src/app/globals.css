@@ -182,7 +182,6 @@ body, main {
   touch-action: pan-y pinch-zoom;
   margin-left: calc(var(--slide-spacing) * -1);
   height: var(--slide-height);
-
 }
 .embla__slide {
   display: flex;
