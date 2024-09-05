@@ -72,7 +72,7 @@ const HomeCarousel = () => {
               delay: 3000,
             }),
           ]}
-        className="flex flex-col h-[72vh] 2xl:h-[76vh] rounded-xl overflow-hidden"
+        className="flex flex-col h-[72vh] 2xl:h-[74vh] rounded-xl overflow-hidden"
         >
         <CarouselContent>
           {/* <CarouselItem><Image src={pic1} alt="" className="object-cover w-full h-[73vh] xl:h-[76vh] object-bottom hover:cursor-pointer"/></CarouselItem>
