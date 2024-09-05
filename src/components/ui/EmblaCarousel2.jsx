@@ -37,7 +37,7 @@ const EmblaCarousel2 = ({ slides, options }) => {
               <div className={`embla__slide relative`} key={slides.sys.id}>
                 <Link href={`/projects/${slides.fields.slug}`}>
                   <div
-                    className={`z-10 absolute w-full xl:h-[70vh] 2xl:h-full font-semibold opacity-0 hover:opacity-100 hover:bg-black rounded-xl hover:bg-opacity-70 text-white hover:delay-50 flex justify-center items-center hover:transition`}
+                    className={`z-10 absolute w-full xl:h-[70vh] 2xl:h-full font-semibold opacity-0 hover:opacity-100 hover:bg-black rounded-xl hover:bg-opacity-70 text-white hover:delay-50 flex justify-center items-center hover:transition text-2xl`}
                   >
                     {slides.fields.title}
                   </div>
