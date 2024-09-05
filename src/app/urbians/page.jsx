@@ -130,7 +130,7 @@ const Urbians = () => {
         </div>
       </div>
 
-      <div className='flex flex-col mt-48 gap-12 lg:gap-20 xl:gap-16 justify-center flex-wrap md:justify-between md:flex-nowrap md:flex-row pb-32 xl:px-24 lg:pb-64 lg:px-12'>
+      <div className='flex flex-col mt-48 gap-12 xl:gap-16 justify-center flex-wrap md:justify-between md:flex-nowrap md:flex-row pb-32 xl:px-24 lg:px-12'>
         {members.map((member, index) => (
           <MemberCard
             key={index}
@@ -142,7 +142,7 @@ const Urbians = () => {
       </div>
 
       <div className='flex urbians-bg mb-40 rounded-md'>
-        <div className='text-overlay flex flex-wrap items-center justify-center text-5xl text-white bg-black bg-opacity-80 w-full h-full gap-20 py-20 rounded-md xl:py-52 xl:gap-28'>
+        <div className='text-overlay flex flex-wrap items-center justify-center text-5xl text-white bg-black bg-opacity-80 w-full h-full gap-20 py-20 rounded-md xl:py-36 xl:gap-28'>
           {partners.map((partner, index) => (
             <Image
               src={partners[index].src}
@@ -179,16 +179,19 @@ const Urbians = () => {
         <div></div>
       </div>
 
-      <div id='contact-us' className=' md:px-12'>
-        <h1 className={`${styles.headpoints5xl} mb-4`}>
-          This is how we start the party
-        </h1>
-        <p className='md:w-1/2'>Feel free to ask everything to us!</p>
-        <div className='py-4 flex gap-12 mb-8'>
-          <div className='flex flex-col gap-4 md:w-1/2 pr-32'>
-            <ContactForm />
+      <div id='contact-us' className='flex flex-row md:px-12'>
+        <div>
+          <div className='flex flex-col lg:mb-24'>
+            <h1 className={`${styles.headpoints5xl} mb-4`}>
+              This is how we start the party
+            </h1>
+            <p className='xl:w-1/2'>Feel free to ask everything to us!</p>
+            <div className='py-4 w-full xl:w-[60%]'>
+              <ContactForm />
+            </div>
           </div>
-          <div className='h-fit md:w-1/2 flex gap-6 flex-col'>
+          <div className='h-fit my-12 xl:my-24 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 text-overlay'>
+            {" "}
             {contactDescContent.map((content, index) => (
               <ContactDescription
                 title={contactDescContent[index].title}
@@ -196,7 +199,7 @@ const Urbians = () => {
                 desc={contactDescContent[index].desc}
                 key={index}
               />
-            ))}
+            ))}{" "}
           </div>
         </div>
       </div>

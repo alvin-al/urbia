@@ -17,7 +17,7 @@ function ContactForm() {
     );
   }
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className='flex flex-col items-center'>
       <label htmlFor='email'></label>
       <input
         id='email'
@@ -31,12 +31,12 @@ function ContactForm() {
         id='message'
         name='message'
         placeholder='Beritahu kami projek atau apapun yang bisa kami kontribusikan untuk Anda'
-        className='flex w-full h-64 placeholder:text-wrap placeholder:text-start mb-2 text-start border-b-2 border-gray-800 p-4 focus:outline-none'
+        className='flex w-full h-64 placeholder:text-wrap placeholder:text-start mb-4 text-start border-b-2 border-gray-800 p-4 focus:outline-none'
       />
       <ValidationError prefix='Message' field='message' errors={state.errors} />
       <button
         type='submit'
-        className='hover:bg-gray-200 w-fit flex gap-2 items-center px-4 py-2 hover:rounded-full'
+        className='hover:bg-gray-200 w-fit flex gap-2 items-center self-center px-4 py-2 hover:rounded-full border-2 rounded-full border-black xl:self-start'
         disabled={state.submitting}
       >
         <p className='hover:underline hover:underline-offset-2'>
