@@ -74,7 +74,7 @@ const ProjectPage = () => {
         </p>
       </div>
       <div className='flex flex-row w-full mb-8 mt-4 relative'>
-        <div className='w-1/2 h-full sticky top-[60%] z-10 pr-96'>
+        <div className='xl:w-1/2 2xl:w-1/2 h-full sticky top-[60%] z-10 pr-[25%]'>
           <div className='flex justify-between border-b-2 py-4 border-gray-500 px-4'>
             <p className={`text-xl`}>LOCATION</p>
             <p className='font-bold text-xl'>{post.fields.location}</p>
