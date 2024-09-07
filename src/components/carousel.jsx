@@ -40,17 +40,17 @@ const HomeCarousel = () => {
   }
 
   return (
-    <div className='rounded-lg my-2'>
+    <div>
       <Carousel
         opts={{
           loop: true,
         }}
         plugins={[
           Autoplay({
-            delay: 3000,
+            delay: 2000,
           }),
         ]}
-        className='flex flex-col h-[72vh] 2xl:h-[74vh] rounded-xl overflow-hidden'
+        className='flex flex-col h-[100vh]'
       >
         <CarouselContent>
           {post.map((item) => (
@@ -60,7 +60,7 @@ const HomeCarousel = () => {
                   src={`https:${item.fields.mainImage.fields.file.url}`}
                   alt={item.fields.mainImage.fields.description || "image"}
                   title={`Project: ${item.fields.title}`}
-                  className='object-cover w-full h-[72vh] 2xl:h-[75vh] object-bottom hover:cursor-pointer'
+                  className='object-cover w-full h-[100vh] object-bottom hover:cursor-pointer'
                   width={1000}
                   height={1000}
                 />

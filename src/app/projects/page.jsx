@@ -35,7 +35,6 @@ const Projects = () => {
     fetchData();
   }, []);
 
-
   const handleCategoryChange = useCallback((category) => {
     setSelectedCategory(category);
   }, []);
@@ -65,8 +64,12 @@ const Projects = () => {
   return (
     <div className={`${styles.pageSize} flex z-0`}>
       <Header title='Projects' />
+
       <p className={`${styles.head} text-right mb-2`}>OUR PROJECTS</p>
-      <div id='projects' className='flex justify-center gap-5 xl:max-h-[70vh] 2xl:max-h-full'>
+      <div
+        id='projects'
+        className='flex justify-center gap-5 xl:max-h-[70vh] 2xl:max-h-full'
+      >
         <ProjectSidebar
           categories={categories}
           setCategory={handleCategoryChange}

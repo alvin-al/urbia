@@ -2,15 +2,13 @@
 
 //Class
 //Page class
-export const pageSize = "flex flex-col w-full px-6";
-
-
-
-
+export const pageSize = "flex flex-col w-full";
+export const pageContainer = "px-20";
 
 //Font
 export const mainHead = "font-extrabold text-7xl md:text-8xl";
-export const head = "font-semibold text-lg md:font-semibold md:text-xl lg:font-semibold lg:text-2xl";
+export const head =
+  "font-semibold text-lg md:font-semibold md:text-xl lg:font-semibold lg:text-2xl";
 export const servicesPoints = "font-semibold text-base";
 export const subheader = "font-medium text-sm";
 export const footer = "font-semibold text-sm";
