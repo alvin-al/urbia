@@ -12,17 +12,16 @@ const Header = ({ title }) => {
   // Add event listener to handle scrolling when the component mounts
   useEffect(() => {
     if (isOpen) {
-      document.body.classList.add("no-scroll");
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.classList.remove("no-scroll");
+      document.body.style.overflow = "auto";
     }
 
-    // Clean up by removing the event listener when the component unmounts
+    // Clean up by restoring the overflow style when the component unmounts
     return () => {
-      document.body.classList.remove("no-scroll");
+      document.body.style.overflow = "auto";
     };
   }, [isOpen]);
-
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
