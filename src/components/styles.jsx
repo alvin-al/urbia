@@ -2,7 +2,6 @@
 
 //Class
 //Page class
-export const pageSize = "flex flex-col w-full";
 export const pageContainer = "px-20";
 
 //Font

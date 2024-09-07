@@ -2,10 +2,10 @@ import React from "react";
 import Link from "next/link";
 import * as styles from "@/components/styles";
 
-const Navbar = () => {
+const Navbar = ({ className }) => {
   return (
     <nav className={`${styles.displayPhone}`}>
-      <ul className='flex gap-6 h-full'>
+      <ul className={`flex gap-6 h-full ${className}`}>
         <li className='hover:border-b-2 hover:border-black border-b-2 border-transparent'>
           <Link href='/'>Home</Link>
         </li>

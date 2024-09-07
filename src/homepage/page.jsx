@@ -12,7 +12,7 @@ const Homepage = () => {
   return (
     <div className={`${styles.pageSize} h-[100vh] bg-slate-500`}>
       {/* Carousel */}
-      <div className='absolute inset-0'>
+      <div className='absolute inset-0 z-0'>
         <HomeCarousel />
       </div>
       {/* Header */}
@@ -20,7 +20,7 @@ const Homepage = () => {
         <Header title='Home' />
       </div>
       {/* Text urbia */}
-      <div className='absolute pl-20 top-[40%] transform -translate-y-[40%]'>
+      <div className='absolute ml-20 top-[40%] transform -translate-y-[40%]'>
         <p className='font-extrabold text-8xl text-white'>
           Urbia
           <br />
@@ -31,7 +31,7 @@ const Homepage = () => {
       </div>
       {/* Footer */}
       <div
-        className={`${styles.pageContainer} z-10 bottom-0 relative mt-auto bg-white py-4 gap-8 flex flex-col rounded-t-[48px]`}
+        className={`${styles.pageContainer} z-0 bottom-0 relative mt-auto bg-white py-4 gap-8 flex flex-col rounded-t-[48px]`}
       >
         <div className='flex items-center justify-between'>
           <Social />
