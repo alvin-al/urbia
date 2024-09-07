@@ -137,7 +137,7 @@ const itemsContent = [
   },
   {
     no: 5,
-    title: "Research & Development",
+    title: "Development and Deploy",
     caption: (
       <>
         Urbia memiliki pandangan bahwa dampak dari arsitektur berpengaruh dalam
@@ -156,8 +156,6 @@ const itemsContent = [
         dengan pihak-pihak dan komunitas yang memiliki tujuan dan semangat yang
         berkaitan satu sama lain.
         <br />
-        <br />
-        <h2 className='font-bold'>Development and Deploy</h2>
         <br />
         Pandangan ini perlunya untuk juga diketahui oleh kalangan yang lebih
         luas, tidak hanya berputar pada Urbia saja. Kedepannya, proses ini dapat
@@ -186,14 +184,17 @@ const Services = () => {
 
   return (
     <div>
+      {/* Hero banner */}
       <div
-        className={`${styles.pageSize} bg-[#11468F] bg-contain max-w-full lg:content-center xl:h-[85vh] rounded-b-3xl 2xl:rounded-b-[2rem] 2xl:h-[90vh] pt-2`}
+        className={`flex-col flex bg-[#11468F] bg-contain max-w-full lg:content-center xl:h-[105vh] rounded-b-3xl 2xl:rounded-b-[2rem]  pt-2`}
         style={{
           backgroundImage: "url('/images/services-background/line.svg')",
         }}
       >
         <Header title='Services' />
-        <div className='flex flex-col lg:flex-row w-full h-[140vh] lg:h-[80vh] md:px-12 gap-8 lg:items-center xl:items-stretch xl:justify-between'>
+        <div
+          className={`${styles.pageContainer} flex flex-col bgy lg:flex-row w-full h-[140vh] lg:h-[80vh] gap-8 lg:items-center xl:items-stretch xl:justify-between`}
+        >
           <div className='lg:order-2 lg:h-2/3 my-8 h-full'>
             <Image
               className='m-auto self-center h-full w-auto xl:h-[120%]'
@@ -204,20 +205,19 @@ const Services = () => {
               loading='lazy'
             />
           </div>
-          <div className='lg:order-1 lg:content-center lg:w-1/2'>
+          <div className={`lg:order-1 lg:content-center lg:w-1/2`}>
             <h1
               className={`text-5xl text-white font-semibold mb-8 md:text-6xl xl:text-8xl`}
             >
               Service <br /> We Provide
             </h1>
-            <p className={`${styles.paragraph} text-white lg:pr-12 xl:pr-12`}>
-              {serviceCaption}
-            </p>
+            <p className={`text-white lg:pr-12 xl:pr-12`}>{serviceCaption}</p>
           </div>
         </div>
       </div>
 
-      <div className={`${styles.pageSize} mt-6 mb-24 md:px-16`}>
+      {/* Services */}
+      <div className={`${styles.pageContainer} mt-6 mb-24 `}>
         <Accordion type='single' collapsible>
           {itemsContent.map((item, index) => (
             <Items
@@ -230,7 +230,8 @@ const Services = () => {
         </Accordion>
       </div>
 
-      <div className={`${styles.pageSize}`}>
+      {/* Footer */}
+      <div className={`${styles.pageContainer}`}>
         <Footer />
       </div>
     </div>
