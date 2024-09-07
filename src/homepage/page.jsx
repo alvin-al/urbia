@@ -10,7 +10,7 @@ import ButtonOval from "@/components/ButtonOval";
 
 const Homepage = () => {
   return (
-    <div className={`${styles.pageSize} h-[100vh] bg-slate-500`}>
+    <div className={`${styles.pageSize} h-screen`}>
       {/* Carousel */}
       <div className='absolute inset-0 z-0'>
         <HomeCarousel />

@@ -3,6 +3,7 @@
 //Class
 //Page class
 export const pageContainer = "px-20";
+export const pageSize = "flex flex-col w-full";
 
 //Font
 export const mainHead = "font-extrabold text-7xl md:text-8xl";
