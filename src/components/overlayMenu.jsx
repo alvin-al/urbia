@@ -71,7 +71,7 @@ const OverlayMenu = ({ isOpen }) => {
           </p>
         </div>
         <div>
-          <Footer />
+          <Footer color='white' />
         </div>
       </div>
     </div>
