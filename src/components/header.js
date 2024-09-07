@@ -38,7 +38,11 @@ const Header = ({ title }) => {
           <button
             className={`${"flex flex-col h-10 w-10 rounded justify-center items-center group hover:fade-in-100 z-30"} ${
               isOpen ? "border-2 lg:hover:bg-gray-600" : "hover:bg-gray-200"
-            } ${title === "Services" || "Home" ? "hover:bg-gray-400" : null}`}
+            } ${
+              title === "Services" || title === "Home"
+                ? "hover:bg-gray-400"
+                : null
+            }`}
             onClick={() => {
               toggleMenu();
             }}
@@ -48,19 +52,25 @@ const Header = ({ title }) => {
                 isOpen
                   ? "rotate-45 translate-y-2 opacity-100 bg-white"
                   : "opacity-50 group-hover:opacity-100 "
-              } ${title === "Services" || "Home" ? "bg-white" : null}`}
+              } ${
+                title === "Services" || title === "Home" ? "bg-white" : null
+              }`}
             />
             <div
               className={`${genericHamburgerLine} ${
                 isOpen ? "opacity-0" : "opacity-50 group-hover:opacity-100"
-              } ${title === "Services" || "Home" ? "bg-white" : null}`}
+              } ${
+                title === "Services" || title === "Home" ? "bg-white" : null
+              }`}
             />
             <div
               className={`${genericHamburgerLine} ${
                 isOpen
                   ? "-rotate-45 -translate-y-2 opacity-100 bg-white"
                   : "opacity-50 group-hover:opacity-100"
-              } ${title === "Services" || "Home" ? "bg-white" : null}`}
+              } ${
+                title === "Services" || title === "Home" ? "bg-white" : null
+              }`}
             />
           </button>
         </div>
@@ -68,7 +78,7 @@ const Header = ({ title }) => {
         <div>
           <Link href='/'>
             <Image
-              src={title === "Services" || "Home" ? logoWhite : logo}
+              src={title === "Services" || title === "Home" ? logoWhite : logo}
               alt='logo'
               sizes='(max-width : 375px) 80vw'
             />
