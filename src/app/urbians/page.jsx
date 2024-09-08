@@ -22,6 +22,7 @@ import {
 } from "react-icons/fa6";
 import ContactForm from "@/components/ContactForm";
 import ContactDescription from "@/components/ContactDescription";
+import urbiansbg from "@/../../public/images/urbiansbg.webp";
 
 const Urbians = () => {
   const members = [
@@ -113,14 +114,15 @@ const Urbians = () => {
   ];
 
   return (
-    <div className={`${styles.pageSize} flex border`}>
+    <div className={`${styles.pageSize} flex w-full`}>
+      <div className="bg-[#11468F] w-full">
       <div>
         <Header title='Urbians' />
       </div>
 
-      <div className='pt-[50vh] flex flex-col justify-between md:px-12'>
-        <div className='w-fit '>
-          <h1 className={`${styles.mainHead} ${styles.blueText}`}>
+      <div className={`flex flex-row pl-20 w-full justify-between items-end xl:h-[92vh] xl:pb-8`}>
+        <div className='w-1/3'>
+          <h1 className={`${styles.mainHead} text-white`}>
             Hello
             <br />
             We Are
@@ -128,9 +130,13 @@ const Urbians = () => {
             Urbians!
           </h1>
         </div>
+        <div className="w-2/3 h-[80%] ml-16 object-cover flex items-end">
+          <Image src={urbiansbg} className="w-full h-full object-cover"/>
+        </div>
+      </div>
       </div>
 
-      <div className='flex flex-col mt-48 gap-12 xl:gap-16 justify-center flex-wrap md:justify-between md:flex-nowrap md:flex-row pb-32 xl:px-24 lg:px-12'>
+      <div className='flex flex-col pt-48 gap-12 xl:gap-16 justify-center flex-wrap md:justify-between md:flex-nowrap md:flex-row pb-32 xl:px-24 lg:px-12 bg-[#11468F]'>
         {members.map((member, index) => (
           <MemberCard
             key={index}
@@ -141,8 +147,8 @@ const Urbians = () => {
         ))}
       </div>
 
-      <div className='flex urbians-bg mb-40 rounded-md'>
-        <div className='text-overlay flex flex-wrap items-center justify-center text-5xl text-white bg-black bg-opacity-80 w-full h-full gap-20 py-20 rounded-md xl:py-36 xl:gap-28'>
+      <div className='flex urbians-bg mb-40'>
+        <div className='text-overlay flex flex-wrap items-center justify-center text-5xl text-white bg-black bg-opacity-80 w-full h-full gap-20 py-20 xl:py-36 xl:gap-28'>
           {partners.map((partner, index) => (
             <Image
               src={partners[index].src}
@@ -155,7 +161,7 @@ const Urbians = () => {
         </div>
       </div>
 
-      <div id='urbians-data' className='mb-20  md:px-12'>
+      <div id='urbians-data' className={`mb-20 ${styles.pageContainer}`}>
         <div className='border-t border-black pt-8 pb-24 flex gap-4 flex-col'>
           <h1 className={`${styles.headpoints5xl}`}>A team made of experts</h1>
           <p className='md:w-1/2'>
@@ -179,7 +185,7 @@ const Urbians = () => {
         <div></div>
       </div>
 
-      <div id='contact-us' className='flex flex-row md:px-12'>
+      <div id='contact-us' className={`${styles.pageContainer} flex flex-row`}>
         <div>
           <div className='flex flex-col lg:mb-24'>
             <h1 className={`${styles.headpoints5xl} mb-4`}>
@@ -204,7 +210,9 @@ const Urbians = () => {
         </div>
       </div>
 
+      <div className={`${styles.pageContainer}`}>
       <Footer className='items-end' />
+      </div>
     </div>
   );
 };
