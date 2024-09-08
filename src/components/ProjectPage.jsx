@@ -70,7 +70,7 @@ const ProjectPage = () => {
           />
         </div>
         {/* Container */}
-        <div className={`${styles.pageContainer}`}>
+        <div className={`px-8`}>
           {/* Title & Category */}
           <div className='mt-4 mb-12'>
             <h1 className={`${styles.headpoints5xl} uppercase`}>
