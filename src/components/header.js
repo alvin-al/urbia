@@ -22,9 +22,12 @@ const Header = ({ title }) => {
       document.body.style.overflow = "auto";
     };
   }, [isOpen]);
+
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
   const genericHamburgerLine = `h-[4px] w-6 my-[2px] rounded-full bg-black transition ease transform duration-300 z-50`;
 
   return (

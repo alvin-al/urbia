@@ -42,36 +42,44 @@ const OverlayMenu = ({ isOpen }) => {
     //   </nav>
     // </div>
 
-    <div className='w-4/6 fixed z-20 right-0 top-0'>
-      <div
-        className={`z-0 backdrop-blur-md w-full h-full ${
-          isOpen
-            ? "opacity-100 bg-white pointer-events-none transition-opacity duration-500"
-            : "opacity-0"
-        }`}
-      ></div>
+    <div
+      className={`h-full w-screen fixed z-20 left-0 top-0 backdrop-blur-sm overflow-y-hidden transition ease-in-out duration-500 ${
+        isOpen
+          ? "translate-x-0 slide-in-from-right"
+          : "-translate-x-full slide-out-to-right"
+      } `}
+    >
+      <div className='w-4/6 fixed z-20 right-0 top-0'>
+        <div
+          className={`z-0 backdrop-blur-md w-full h-full ${
+            isOpen
+              ? "opacity-100 bg-white pointer-events-none transition-opacity duration-500"
+              : "opacity-0"
+          }`}
+        ></div>
 
-      <div
-        className={`h-full w-2/6 fixed z-20 left-0 top-0 ${
-          styles.bluePallete
-        } overflow-x-hidden transition ease-in-out duration-500 ${
-          isOpen
-            ? "translate-x-0 slide-in-from-right"
-            : "-translate-x-full slide-out-to-right"
-        } pl-8 pt-32 flex flex-col justify-between`}
-      >
-        <div className={``}>
-          <NavbarSidebar />
-        </div>
-        <div>
-          <p className={`font-medium text-lg text-white pr-16`}>
-            Manifesting vision space into reality through nature, materials,
-            ambience, and contextual methods to gain long last investing and
-            value
-          </p>
-        </div>
-        <div>
-          <Footer color='white' />
+        <div
+          className={`h-full w-2/6 fixed z-20 left-0 top-0 ${
+            styles.bluePallete
+          } overflow-x-hidden transition ease-in-out duration-500 ${
+            isOpen
+              ? "translate-x-0 slide-in-from-right"
+              : "-translate-x-full slide-out-to-right"
+          } pl-8 pt-32 flex flex-col justify-between`}
+        >
+          <div className={``}>
+            <NavbarSidebar />
+          </div>
+          <div>
+            <p className={`font-medium text-lg text-white pr-16`}>
+              Manifesting vision space into reality through nature, materials,
+              ambience, and contextual methods to gain long last investing and
+              value
+            </p>
+          </div>
+          <div>
+            <Footer color='white' />
+          </div>
         </div>
       </div>
     </div>
