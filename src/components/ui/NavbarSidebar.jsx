@@ -19,7 +19,7 @@ const NavbarSidebar = () => {
         <li
           className={`hover:border-b-2 hover:border-[#da1212] hover:text-[#da1212] border-b-2 border-transparent text-white w-max`}
         >
-          <Link href='/services'>Service</Link>
+          <Link href='/services'>Service We Provide</Link>
         </li>
         <li
           className={`hover:border-b-2 hover:border-[#da1212] hover:text-[#da1212] border-b-2 border-transparent text-white w-max`}
