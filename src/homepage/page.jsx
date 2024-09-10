@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Header from "@/components/header";
 import HomeCarousel from "@/components/carousel";
@@ -7,10 +8,35 @@ import * as styles from "@/components/styles";
 import Navbar from "@/components/ui/Navbar";
 import { Button } from "@/components/ui/button";
 import ButtonOval from "@/components/ButtonOval";
+import { PuffLoader } from "react-spinners";
+import { useEffect, useState } from "react";
 
 const Homepage = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Cek status loading dari localStorage/sessionStorage
+    const isLoading = localStorage.getItem("isLoading");
+    if (isLoading === "true") {
+      setLoading(true);
+    }
+
+    // Set loading ke true dan simpan ke localStorage/sessionStorage
+    setLoading(true);
+    localStorage.setItem("isLoading", "true");
+
+    const timer = setTimeout(() => {
+      setLoading(false);
+      localStorage.setItem("isLoading", "false");
+    }, 1500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className={`${styles.pageSize} h-screen`}>
+      {/* Loading */}
+
       {/* Carousel */}
       <div className='absolute inset-0 z-0'>
         <HomeCarousel />
