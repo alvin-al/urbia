@@ -19,7 +19,7 @@ import { useEffect } from "react";
 import Link from "next/link";
 import { Skeleton } from "@/components/ui/skeleton";
 
-const HomeCarousel = () => {
+const HomeCarousel = ({ onLoadingComplete }) => {
   const [post, setPost] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -63,6 +63,7 @@ const HomeCarousel = () => {
                   className='object-cover w-full h-[100vh] object-bottom hover:cursor-pointer'
                   width={1000}
                   height={1000}
+                  priority={true}
                 />
               </Link>
             </CarouselItem>

@@ -4,15 +4,18 @@ import Link from "next/link";
 
 const ContactDescription = ({ title, icon: Icon, desc, nameLink, link }) => {
   return (
-    <div className='flex w-full h-full xl:gap-2 2xl:gap-0'>
-      <div className='w-1/6'>
-        <Icon className='w-14 h-14' />
+    <div className='flex h-full w-full xl:gap-4'>
+      <div className='w-fit'>
+        <Icon className='w-12 h-12' />
       </div>
-      <div className='w-5/6'>
+      <div className='w-auto'>
         <h2 className={`${styles.display}`}>{title}</h2>
         <p>{desc}</p>
-        <Link href={link} className="mt-2">
-            <button className="text-[#11468F] text-md font-semibold">{nameLink}</button>
+        <Link
+          href={link}
+          className={`mt-2 text-[#11468F] hover:text-[#DA1212]`}
+        >
+          <button className={`text-md font-semibold`}>{nameLink}</button>
         </Link>
       </div>
     </div>
