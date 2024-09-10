@@ -18,6 +18,7 @@ import client from "@/lib/contentful";
 import { useEffect } from "react";
 import Link from "next/link";
 import { Skeleton } from "@/components/ui/skeleton";
+import { PuffLoader } from "react-spinners";
 
 const HomeCarousel = ({ onLoadingComplete }) => {
   const [post, setPost] = useState(null);
@@ -33,8 +34,8 @@ const HomeCarousel = ({ onLoadingComplete }) => {
 
   if (loading) {
     return (
-      <div className='flex flex-col h-[72vh] 2xl:h-[75vh] rounded-xl my-2'>
-        <Skeleton className='w-full h-[72vh] 2xl:h-[75vh]' />
+      <div className='w-full h-[80vh] justify-center items-center flex'>
+        <PuffLoader />
       </div>
     );
   }
