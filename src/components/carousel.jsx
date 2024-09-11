@@ -20,12 +20,14 @@ import Link from "next/link";
 import { Skeleton } from "@/components/ui/skeleton";
 import { PuffLoader } from "react-spinners";
 
-const HomeCarousel = ({ }) => {
+const HomeCarousel = ({}) => {
   const [post, setPost] = useState(null);
   const [loading, setLoading] = useState(true);
 
   client
-    .getEntries()
+    .getEntries({
+      content_type: "projects",
+    })
     .then((response) => {
       setPost(response.items);
       setLoading(false);
