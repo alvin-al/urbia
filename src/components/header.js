@@ -55,14 +55,14 @@ const Header = ({ title }) => {
                   ? "rotate-45 translate-y-2 opacity-100 bg-white"
                   : "opacity-50 group-hover:opacity-100 "
               } ${
-                title === "Services" || title === "Home" || title === "Urbians" ? "bg-white" : null
+                title === "Services" || title === "Home" || title === "Urbians" || title === "Build the Community" ? "bg-white" : null
               }`}
             />
             <div
               className={`${genericHamburgerLine} ${
                 isOpen ? "opacity-0" : "opacity-50 group-hover:opacity-100"
               } ${
-                title === "Services" || title === "Home" || title === "Urbians" ? "bg-white" : null
+                title === "Services" || title === "Home" || title === "Urbians" || title === "Build the Community" ? "bg-white" : null
               }`}
             />
             <div
@@ -71,7 +71,7 @@ const Header = ({ title }) => {
                   ? "-rotate-45 -translate-y-2 opacity-100 bg-white"
                   : "opacity-50 group-hover:opacity-100"
               } ${
-                title === "Services" || title === "Home" || title === "Urbians" ? "bg-white" : null
+                title === "Services" || title === "Home" || title === "Urbians" || title === "Build the Community" ? "bg-white" : null
               }`}
             />
           </button>
@@ -80,7 +80,7 @@ const Header = ({ title }) => {
         <div>
           <Link href='/'>
             <Image
-              src={title === "Services" || title === "Home" || title === "Urbians" ? logoWhite : logo}
+              src={title === "Services" || title === "Home" || title === "Urbians" || title === "Build the Community" ? logoWhite : logo}
               alt='logo'
               sizes='(max-width : 375px) 80vw'
             />

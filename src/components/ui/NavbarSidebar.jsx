@@ -24,7 +24,7 @@ const NavbarSidebar = () => {
         <li
           className={`hover:border-b-2 hover:border-[#da1212] hover:text-[#da1212] border-b-2 border-transparent text-white w-max`}
         >
-          <Link href='/build-the-community'>Build The Community</Link>
+          <Link href='/build-community'>Build The Community</Link>
         </li>
         <li
           className={`hover:border-b-2 hover:border-[#da1212] hover:text-[#da1212] border-b-2 border-transparent text-white w-max`}

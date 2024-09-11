@@ -20,7 +20,7 @@ import Link from "next/link";
 import { Skeleton } from "@/components/ui/skeleton";
 import { PuffLoader } from "react-spinners";
 
-const HomeCarousel = ({ onLoadingComplete }) => {
+const HomeCarousel = ({ }) => {
   const [post, setPost] = useState(null);
   const [loading, setLoading] = useState(true);
 

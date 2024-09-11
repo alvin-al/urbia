@@ -6,10 +6,8 @@ import Social from "@/components/social";
 import Footer from "@/components/footer";
 import * as styles from "@/components/styles";
 import Navbar from "@/components/ui/Navbar";
-import { Button } from "@/components/ui/button";
 import ButtonOval from "@/components/ButtonOval";
-import { PuffLoader } from "react-spinners";
-import { useEffect, useState } from "react";
+
 
 const Homepage = () => {
  
@@ -40,7 +38,7 @@ const Homepage = () => {
         className={`${styles.pageContainer} z-0 bottom-0 relative mt-auto bg-white py-4 gap-8 flex flex-col rounded-t-[48px]`}
       >
         <div className='flex items-center justify-between'>
-          <Social />
+          {/* <Social /> */}
           <Navbar />
         </div>
         <div className='flex items-center justify-between'>
