@@ -78,7 +78,7 @@ const Projects = () => {
       <Header title='Projects' />
       {/* Container */}
       <div className={`flex flex-col pr-20 gap-4`}>
-        <div className=' ml-80'>
+        <div className='ml-80'>
           <p className={`text-4xl font-bold`}>Our Projects</p>
         </div>
         <div

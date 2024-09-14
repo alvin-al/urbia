@@ -5,21 +5,16 @@ import client from "@/lib/contentful";
 import BuildCommunityContent from "@/components/BuildCommunityContent";
 
 const BuildCommunity = () => {
-
   return (
-    <div className={`${styles.pageSize} h-screen ${styles.bluePallete}`}>
+    <div className={`${styles.pageSize} h-full pb-96 ${styles.bluePallete}`}>
       <div className='z-10'>
         <Header title='Build the Community' />
       </div>
-      <div className='absolute ml-20 top-[40%] transform -translate-y-[40%]'>
-        <BuildCommunityContent />
-        <p className='font-extrabold text-8xl text-white'>
-          Urbia
-          <br />
-          Spatial
-          <br />
-          Manifesto
+      <div className={`${styles.pageContainer} flex flex-col w-full`}>
+        <p className='self-end text-white text-4xl font-bold mb-20'>
+          Build The Community
         </p>
+        <BuildCommunityContent />
       </div>
     </div>
   );
