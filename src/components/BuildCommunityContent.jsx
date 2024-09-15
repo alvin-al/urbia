@@ -1,12 +1,17 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
+import arrow from "@/../public/icons/arrow-icon.svg";
+import Image from "next/image";
+import { ChevronDownIcon, ArrowBottomRightIcon } from "@radix-ui/react-icons";
 
 const BuildCommunityContent = () => {
   const [click, setClick] = useState(false);
+  const [hover, setHover] = useState(false);
 
   return (
     <div>
       <div className='w-full text-white flex h-fit'>
+        {/* Judul */}
         <div className='w-1/3 py-8 pr-12 flex flex-col gap-2 sticky top-[5%] h-full'>
           <h2 className='text-2xl font-bold'>
             Upaya Perkembangan Kota : Tidak Adanya Keterlibatan Masyarakat
@@ -14,13 +19,19 @@ const BuildCommunityContent = () => {
           </h2>
           <p>3 min. read | Oct 13, 2021</p>
         </div>
+        {/* Konten */}
         <div
-          className={`cursor-pointer w-2/3 border-t-2 border-b-2 pt-8 pl-8 pb-12 pr-24 flex text-ellipsis text-wrap overflow-hidden ${
+          className={`cursor-pointer w-2/3 border-t-2 border-b-2 p-8 gap-12 flex text-ellipsis text-wrap overflow-hidden ${
             click ? "h-full" : "h-72"
           }`}
           onClick={() => setClick(!click)}
         >
-          <div className={`h-full`}>
+          {/* teks */}
+          <div
+            className={`h-full w-fit`}
+            onMouseEnter={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
+          >
             <p className={`text-justify ${click ? "" : "line-clamp-[8]"}`}>
               Silau dengan pesona dan imaji hidup yang lebih baik, orang-orang
               tergoda meninggalkan kampungnya dan pergi ke kota, berharap
@@ -119,6 +130,13 @@ const BuildCommunityContent = () => {
               benarkah relokasi dan aktivitas susun-menyusun adalah jaminan atas
               selesainya problem kawasan kumuh?
             </p>
+          </div>
+          <div className={`w-fit ${click ? "" : ""}`}>
+            <ArrowBottomRightIcon
+              className={`h-16 w-16 shrink-0 text-white text-muted-foreground transition-transform duration-200 border-2 border-white rounded-full inline-block p-3 ${
+                hover ? "bg-white text-blue-800" : "bg-transparent"
+              } ${click ? "-rotate-90 " : ""}`}
+            />
           </div>
         </div>
       </div>
