@@ -1,9 +1,7 @@
 import Header from "@/components/header";
 import * as styles from "@/components/styles";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import client from "@/lib/contentful";
-import BuildCommunityContent from "@/components/BuildCommunityContent";
-
+import BuildCommunityContainer from "@/components/ui/BuildCommunityContainer";
+import Footer from "@/components/footer";
 
 const teksnya = {
   title:
@@ -16,26 +14,22 @@ const teksnya = {
 
 const BuildCommunity = () => {
   return (
-    <div className={`${styles.pageSize} h-full pb-96 ${styles.bluePallete}`}>
+    <div
+      className={`${styles.pageSize} min-h-[100vh] ${styles.bluePallete} flex justify-stretch`}
+    >
       <div className='z-10'>
         <Header title='Build the Community' />
       </div>
-      <div className={`${styles.pageContainer} flex flex-col w-full`}>
-        <h2 className='self-end text-white text-4xl font-bold mb-20'>
-          Build The Community
-        </h2>
-        <BuildCommunityContent
-          title={teksnya.title}
-          minutes={teksnya.minutes}
-          date={teksnya.date}
-          content={teksnya.content}
-        />
-        <BuildCommunityContent
-          title={teksnya.title}
-          minutes={teksnya.minutes}
-          date={teksnya.date}
-          content={teksnya.content}
-        />
+      <div className="">
+        <div className={`${styles.pageContainer} flex flex-col w-full`}>
+          <h2 className='self-end text-white text-4xl font-bold mb-20'>
+            Build The Community
+          </h2>
+          <BuildCommunityContainer />
+        </div>
+      </div>
+      <div className={`${styles.pageContainer}`}>
+        <Footer color='white' />
       </div>
     </div>
   );
