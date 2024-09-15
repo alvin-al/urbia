@@ -25,13 +25,11 @@ const BuildCommunityContent = () => {
             click ? "h-full" : "h-72"
           }`}
           onClick={() => setClick(!click)}
+          onMouseEnter={() => setHover(true)}
+          onMouseLeave={() => setHover(false)}
         >
           {/* teks */}
-          <div
-            className={`h-full w-fit`}
-            onMouseEnter={() => setHover(true)}
-            onMouseLeave={() => setHover(false)}
-          >
+          <div className={`h-full w-fit`}>
             <p className={`text-justify ${click ? "" : "line-clamp-[8]"}`}>
               Silau dengan pesona dan imaji hidup yang lebih baik, orang-orang
               tergoda meninggalkan kampungnya dan pergi ke kota, berharap
