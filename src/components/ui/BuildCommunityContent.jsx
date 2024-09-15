@@ -49,7 +49,7 @@ const BuildCommunityContent = ({ title, date, content, number }) => {
 
   return (
     <div>
-      <div className='w-full text-white flex h-full mb-4'>
+      <div className='w-full text-white flex h-full'>
         {/* Judul */}
         <div
           className={`w-1/3 py-8 pr-12 flex flex-col gap-2 h-full ${
