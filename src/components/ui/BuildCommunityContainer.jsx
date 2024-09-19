@@ -6,6 +6,7 @@ import { PuffLoader } from "react-spinners";
 
 const BuildCommunityContainer = () => {
   const [data, setData] = useState(null);
+  const [openIndex, setOpenIndex] = useState(null);
 
   client
     .getEntries({
@@ -32,6 +33,8 @@ const BuildCommunityContainer = () => {
               date={item.sys.updatedAt}
               content={item.fields.content}
               number={index}
+              isOpen={openIndex === index}
+              onClick={() => setOpenIndex(openIndex === index ? null : index)}
             />
           </li>
         ))}

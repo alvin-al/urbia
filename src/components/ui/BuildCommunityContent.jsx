@@ -6,8 +6,14 @@ import { ChevronDownIcon, ArrowBottomRightIcon } from "@radix-ui/react-icons";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 
-const BuildCommunityContent = ({ title, date, content, number }) => {
-  const [click, setClick] = useState(false);
+const BuildCommunityContent = ({
+  title,
+  date,
+  content,
+  number,
+  isOpen,
+  onClick,
+}) => {
   const [hover, setHover] = useState(false);
   const options = {
     renderNode: {
@@ -53,7 +59,7 @@ const BuildCommunityContent = ({ title, date, content, number }) => {
         {/* Judul */}
         <div
           className={`w-1/3 py-8 pr-12 flex flex-col gap-2 h-full ${
-            click ? "sticky top-[5%]" : ""
+            isOpen ? "sticky top-[5%]" : ""
           }`}
         >
           <h2 className='text-2xl font-bold'>{title}</h2>
@@ -66,15 +72,15 @@ const BuildCommunityContent = ({ title, date, content, number }) => {
         {/* Konten */}
         <div
           className={`cursor-pointer w-2/3 border-b-2 p-8 gap-12 flex text-ellipsis text-wrap overflow-hidden  ${
-            click ? "h-full" : "h-fit"
+            isOpen ? "h-full" : "h-fit"
           } ${number > 0 ? "border-t-0" : "border-t-2"}`}
-          onClick={() => setClick(!click)}
+          onClick={onClick}
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
         >
           {/* teks */}
           <div className={`h-full w-fit`}>
-            <div className={`text-justify ${click ? "" : "line-clamp-[8]"}`}>
+            <div className={`text-justify ${isOpen ? "" : "line-clamp-[8]"}`}>
               {renderedContent}
             </div>
           </div>
@@ -82,7 +88,7 @@ const BuildCommunityContent = ({ title, date, content, number }) => {
             <ArrowBottomRightIcon
               className={`h-16 w-16 shrink-0  transition-transform duration-300 border-2 border-white rounded-full inline-block p-3 ${
                 hover ? "bg-white text-[#11468F] " : "bg-transparent"
-              } ${click ? "-rotate-90 " : ""}`}
+              } ${isOpen ? "-rotate-90 " : ""}`}
             />
           </div>
         </div>

@@ -132,7 +132,6 @@ const Urbians = () => {
         <div>
           <Header title='Urbians' />
         </div>
-
         <div
           className={`flex flex-row pl-20 w-full justify-between items-end xl:h-[92vh] xl:pb-8`}
         >
@@ -153,18 +152,11 @@ const Urbians = () => {
             />
           </div>
         </div>
+        <div className="px-24">
+          
+        </div>
       </div>
-
-      <div className='flex flex-col pt-48 gap-12 xl:gap-16 justify-center flex-wrap md:justify-between md:flex-nowrap md:flex-row pb-32 xl:px-24 lg:px-12 bg-[#11468F]'>
-        {members.map((member, index) => (
-          <MemberCard
-            key={index}
-            name={members[index].name}
-            src={members[index].src}
-            position={members[index].position}
-          />
-        ))}
-      </div>
+      
 
       <div className='flex urbians-bg mb-40'>
         <div className='text-overlay flex flex-wrap items-center justify-center text-5xl text-white bg-black bg-opacity-80 w-full h-full gap-20 py-20 xl:py-36 xl:gap-28'>
