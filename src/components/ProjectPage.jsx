@@ -9,12 +9,16 @@ import { usePathname } from "next/navigation";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import client from "@/lib/contentful";
 import { PuffLoader } from "react-spinners";
+import { HiOutlineArrowSmLeft, HiOutlineArrowSmRight } from "react-icons/hi";
+import Link from "next/link";
 
 const ProjectPage = () => {
   const pathname = usePathname();
   const slug = pathname.replace("/projects/", "");
   const [post, setPost] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [category, setCategory] = useState(null);
+  const [allPosts, setAllPosts] = useState([]);
 
   useEffect(() => {
     client
@@ -25,9 +29,11 @@ const ProjectPage = () => {
       .then((response) => {
         if (response.items.length > 0) {
           setPost(response.items[0]);
+          setCategory(response.items[0].fields.category);
           setLoading(false);
         } else {
           setPost(null);
+          setCategory(null);
           setLoading(false);
         }
       })
@@ -36,6 +42,42 @@ const ProjectPage = () => {
         setLoading(false);
       });
   }, [slug]);
+
+  useEffect(() => {
+    if (category) {
+      client
+        .getEntries({ "content_type": "projects", "fields.category": category })
+        .then((response) => {
+          setAllPosts(response.items);
+        })
+        .catch((error) => {
+          console.error("Error fetching posts:", error);
+        });
+    } else {
+      setAllPosts([]);
+    }
+  }, [category]);
+
+  const getNextLink = () => {
+    const currentPostIndex = allPosts.findIndex(
+      (item) => item.fields.slug === slug
+    );
+    const nextIndex =
+      currentPostIndex === allPosts.length - 1 ? null : currentPostIndex + 1;
+    return nextIndex !== null
+      ? `/projects/${allPosts[nextIndex].fields.slug}`
+      : null;
+  };
+
+  const getPrevLink = () => {
+    const currentPostIndex = allPosts.findIndex(
+      (item) => item.fields.slug === slug
+    );
+    const prevIndex = currentPostIndex === 0 ? null : currentPostIndex - 1;
+    return prevIndex !== null && allPosts[prevIndex]
+      ? `/projects/${allPosts[prevIndex].fields.slug}`
+      : null;
+  };
 
   if (loading) {
     return (
@@ -50,6 +92,8 @@ const ProjectPage = () => {
   }
 
   const mainImageUrl = post.fields.mainImage.fields.file.url;
+  const nextLink = getNextLink();
+  const prevLink = getPrevLink();
 
   return (
     <div>
@@ -188,6 +232,38 @@ const ProjectPage = () => {
               <Image src={giorno} alt='giorno' />
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Prev next button */}
+      <div className='flex justify-between px-8 py-12'>
+        {/* Prev */}
+        <div className='w-fit'>
+          <Link
+            href={prevLink || "#"}
+            className={`text-xl flex items-center gap-2 border-b-2 border-transparent ${
+              prevLink ? "hover:border-black" : "text-gray-400 cursor-default"
+            }`}
+            disabled={!prevLink}
+            onClick={(e) => !prevLink && e.preventDefault()}
+          >
+            <HiOutlineArrowSmLeft className='w-8 h-8' />
+            PREV
+          </Link>
+        </div>
+        {/* Next */}
+        <div className='w-fit'>
+          <Link
+            href={nextLink || "#"}
+            className={`text-xl flex items-center gap-2 border-b-2 border-transparent ${
+              nextLink ? "hover:border-black" : "text-gray-400 cursor-default"
+            }`}
+            disabled={!nextLink}
+            onClick={(e) => !nextLink && e.preventDefault()}
+          >
+            NEXT
+            <HiOutlineArrowSmRight className='w-8 h-8' />
+          </Link>
         </div>
       </div>
 

@@ -7,7 +7,7 @@ import Footer from "@/components/footer";
 import ProjectSidebar from "@/components/projectSidebar";
 import Link from "next/link";
 import ProjectContentSlider from "@/components/projectContentSlider";
-import client from "../../lib/contentful";
+import client from "@/lib/contentful";
 import { PuffLoader } from "react-spinners";
 
 const Projects = () => {
@@ -18,39 +18,46 @@ const Projects = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const response = await client.getEntries({
+    client
+      .getEntries({
         content_type: "projects",
+      })
+      .then((response) => {
+        if (response.items.length > 0) {
+          setPosts(response.items);
+          setLoading(false);
+
+          const categoryOrder = [
+            "Housing",
+            "Commercial",
+            "Restaurant/Cafe",
+            "Public Space",
+            "Guesthouse/Villa",
+            "Office",
+          ];
+
+          const uniqueCategories = [
+            ...new Set(response.items.map((item) => item.fields.category)),
+          ];
+
+          const sortedCategories = categoryOrder.filter((category) =>
+            uniqueCategories.includes(category)
+          );
+
+          setCategories(sortedCategories);
+
+          if (selectedCategory === null) {
+            setSelectedCategory(sortedCategories[0]);
+          }
+        } else {
+          setPosts([]);
+          setLoading(false);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching post:", error);
+        setLoading(false);
       });
-
-      setPosts(response.items);
-      setLoading(false);
-
-      const categoryOrder = [
-        "Housing",
-        "Commercial",
-        "Restaurant/Cafe",
-        "Public Space",
-        "Guesthouse/Villa",
-        "Office",
-      ];
-
-      const uniqueCategories = [
-        ...new Set(response.items.map((item) => item.fields.category)),
-      ];
-
-      const sortedCategories = categoryOrder.filter((category) =>
-        uniqueCategories.includes(category)
-      );
-
-      setCategories(sortedCategories);
-
-      if (selectedCategory === null) {
-        setSelectedCategory(sortedCategories[0]);
-      }
-    };
-
-    fetchData();
   }, []);
 
   const handleCategoryChange = useCallback((category) => {
@@ -64,14 +71,6 @@ const Projects = () => {
         : posts.filter((post) => post.fields.category === selectedCategory),
     [posts, selectedCategory]
   );
-
-  if (loading) {
-    return (
-      <div className='w-full h-[100vh] justify-center items-center flex'>
-        <PuffLoader />
-      </div>
-    );
-  }
 
   return (
     <div className={`flex z-0 flex-col h-screen`}>
