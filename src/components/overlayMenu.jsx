@@ -49,7 +49,7 @@ const OverlayMenu = ({ isOpen }) => {
           : "-translate-x-full slide-out-to-right"
       } `}
     >
-      <div className=' w-4/6 fixed z-20 right-0 top-0'>
+      <div className='lg:w-1/3 xl:w-4/6 fixed z-20 right-0 top-0'>
         <div
           className={`hidden z-0 backdrop-blur-md w-full h-full ${
             isOpen
@@ -59,7 +59,7 @@ const OverlayMenu = ({ isOpen }) => {
         ></div>
 
         <div
-          className={`h-full lg:w-2/6 fixed z-20 left-0 top-0 ${
+          className={`h-full lg:w-2/5 xl:w-2/6 fixed z-20 left-0 top-0 ${
             styles.bluePallete
           } overflow-x-hidden transition ease-in-out duration-500 ${
             isOpen
