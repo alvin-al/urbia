@@ -49,9 +49,9 @@ const OverlayMenu = ({ isOpen }) => {
           : "-translate-x-full slide-out-to-right"
       } `}
     >
-      <div className='w-4/6 fixed z-20 right-0 top-0'>
+      <div className=' w-4/6 fixed z-20 right-0 top-0'>
         <div
-          className={`z-0 backdrop-blur-md w-full h-full ${
+          className={`hidden z-0 backdrop-blur-md w-full h-full ${
             isOpen
               ? "opacity-100 bg-white pointer-events-none transition-opacity duration-500"
               : "opacity-0"
@@ -59,7 +59,7 @@ const OverlayMenu = ({ isOpen }) => {
         ></div>
 
         <div
-          className={`h-full w-2/6 fixed z-20 left-0 top-0 ${
+          className={`h-full lg:w-2/6 fixed z-20 left-0 top-0 ${
             styles.bluePallete
           } overflow-x-hidden transition ease-in-out duration-500 ${
             isOpen
