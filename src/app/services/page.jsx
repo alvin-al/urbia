@@ -203,6 +203,7 @@ const Services = () => {
               width={400}
               height={400}
               loading='lazy'
+              style={{ objectFit: "contain" }}
             />
           </div>
           <div className={`lg:order-1 lg:content-center lg:w-1/2`}>

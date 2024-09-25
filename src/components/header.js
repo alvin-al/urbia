@@ -37,13 +37,12 @@ const Header = ({ title }) => {
         {/* Tombol hamburger*/}
         <div className='w-20 pr-2 flex justify-end'>
           <button
-            className={`${"flex flex-col h-10 w-10 rounded justify-center items-center group hover:fade-in-100 z-30"} ${
-              isOpen ? "border-2 xl:hover:bg-gray-600" : "xl:hover:bg-gray-200"
-            } ${
-              title === "Services" || title === "Home"
-                ? "hover:bg-gray-400"
-                : null
-            }`}
+            className={`
+    flex flex-col h-10 w-10 rounded justify-center items-center group xl:hover:fade-in-100 z-30
+    ${isOpen ? "border-2 xl:hover:bg-gray-600" : "xl:hover:bg-gray-200"}
+    ${title === "Services" || title === "Home" ? "xl:hover:bg-gray-400" : null}
+    ${isOpen || "sm:hover:bg-transparent"}
+  `}
             onClick={() => {
               toggleMenu();
             }}
