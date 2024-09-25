@@ -132,11 +132,14 @@ const Urbians = () => {
         <div>
           <Header title='Urbians' />
         </div>
+        {/* Container hero */}
         <div
-          className={`flex flex-row pl-20 w-full justify-between items-end xl:h-[92vh] xl:pb-8`}
+          className={`flex flex-col lg:flex-row w-full justify-between lg:items-end h-dvh xl:pb-8`}
         >
-          <div className='w-1/3'>
-            <h1 className={`${styles.mainHead} text-white`}>
+          <div className='2xl:w-1/3 my-24 xl:mt-0'>
+            <h1
+              className={`${styles.mainHead} ${styles.pageContainer} lg:!${styles.mainHead} text-white`}
+            >
               Hello
               <br />
               We Are
@@ -144,7 +147,7 @@ const Urbians = () => {
               Urbians!
             </h1>
           </div>
-          <div className='w-2/3 h-[80%] ml-16 object-cover flex items-end'>
+          <div className='2xl:w-2/3 h-[80%] lg:ml-16 object-cover flex items-end'>
             <Image
               src={urbiansbg}
               alt=''
@@ -152,14 +155,11 @@ const Urbians = () => {
             />
           </div>
         </div>
-        <div className="px-24">
-          
-        </div>
+        <div className='px-24'></div>
       </div>
-      
 
       <div className='flex urbians-bg mb-40'>
-        <div className='text-overlay flex flex-wrap items-center justify-center text-5xl text-white bg-black bg-opacity-80 w-full h-full gap-20 py-20 xl:py-36 xl:gap-28'>
+        <div className='text-overlay flex flex-wrap flex-col lg:flex-row items-center justify-center text-5xl text-white bg-black bg-opacity-80 w-full h-full gap-20 py-20 xl:py-36 xl:gap-28'>
           {partners.map((partner, index) => (
             <Image
               src={partners[index].src}
@@ -196,18 +196,21 @@ const Urbians = () => {
         <div></div>
       </div>
 
-      <div id='contact-us' className={`${styles.pageContainer} flex`}>
-        <div>
-          <div className='flex flex-col lg:mb-8 '>
+      <div id='contact-us' className={`${styles.pageContainer} flex `}>
+        <div className='flex xl:flex-col lg:mb-8 '>
+          <div>
             <h1 className={`${styles.headpoints5xl} mb-4`}>
               This is how we start the party
             </h1>
             <p className=''>Feel free to ask everything to us!</p>
-            <div className='flex'>
+
+            <div className='flex flex-col xl:flex-row'>
               <div className='py-4 w-full xl:w-1/2 xl:pr-40'>
                 <ContactForm />
               </div>
-              <div className='xl:w-1/2 justify-center items-center flex flex-col gap-6 text-overlay xl:px-12'>
+
+              {/* Contact Description */}
+              <div className='my-12 xl:my-0 xl:w-1/2 justify-center items-center md:grid-cols-2 md:grid flex xl:flex flex-col gap-6 text-overlay xl:px-12'>
                 {contactDescContent.map((content, index) => (
                   <ContactDescription
                     scription

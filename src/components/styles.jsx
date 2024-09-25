@@ -6,7 +6,7 @@ export const pageContainer = "px-8 lg:px-20 ";
 export const pageSize = "flex flex-col w-full";
 
 //Font
-export const mainHead = "font-extrabold text-7xl md:text-8xl md:leading-tight";
+export const mainHead = "font-extrabold text-7xl xl:text-8xl md:leading-tight";
 export const head =
   "font-semibold text-lg md:font-semibold md:text-xl lg:font-semibold lg:text-2xl";
 export const servicesPoints = "font-semibold text-base";
