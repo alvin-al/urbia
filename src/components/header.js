@@ -23,7 +23,6 @@ const Header = ({ title }) => {
     };
   }, [isOpen]);
 
-
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -39,7 +38,7 @@ const Header = ({ title }) => {
         <div className='w-20 pr-2 flex justify-end'>
           <button
             className={`${"flex flex-col h-10 w-10 rounded justify-center items-center group hover:fade-in-100 z-30"} ${
-              isOpen ? "border-2 lg:hover:bg-gray-600" : "hover:bg-gray-200"
+              isOpen ? "border-2 xl:hover:bg-gray-600" : "xl:hover:bg-gray-200"
             } ${
               title === "Services" || title === "Home"
                 ? "hover:bg-gray-400"
@@ -55,14 +54,24 @@ const Header = ({ title }) => {
                   ? "rotate-45 translate-y-2 opacity-100 bg-white"
                   : "opacity-50 group-hover:opacity-100 "
               } ${
-                title === "Services" || title === "Home" || title === "Urbians" || title === "Build the Community" ? "bg-white" : null
+                title === "Services" ||
+                title === "Home" ||
+                title === "Urbians" ||
+                title === "Build the Community"
+                  ? "bg-white"
+                  : null
               }`}
             />
             <div
               className={`${genericHamburgerLine} ${
                 isOpen ? "opacity-0" : "opacity-50 group-hover:opacity-100"
               } ${
-                title === "Services" || title === "Home" || title === "Urbians" || title === "Build the Community" ? "bg-white" : null
+                title === "Services" ||
+                title === "Home" ||
+                title === "Urbians" ||
+                title === "Build the Community"
+                  ? "bg-white"
+                  : null
               }`}
             />
             <div
@@ -71,7 +80,12 @@ const Header = ({ title }) => {
                   ? "-rotate-45 -translate-y-2 opacity-100 bg-white"
                   : "opacity-50 group-hover:opacity-100"
               } ${
-                title === "Services" || title === "Home" || title === "Urbians" || title === "Build the Community" ? "bg-white" : null
+                title === "Services" ||
+                title === "Home" ||
+                title === "Urbians" ||
+                title === "Build the Community"
+                  ? "bg-white"
+                  : null
               }`}
             />
           </button>
@@ -80,7 +94,14 @@ const Header = ({ title }) => {
         <div>
           <Link href='/'>
             <Image
-              src={title === "Services" || title === "Home" || title === "Urbians" || title === "Build the Community" ? logoWhite : logo}
+              src={
+                title === "Services" ||
+                title === "Home" ||
+                title === "Urbians" ||
+                title === "Build the Community"
+                  ? logoWhite
+                  : logo
+              }
               alt='logo'
               sizes='(max-width : 375px) 80vw'
             />
