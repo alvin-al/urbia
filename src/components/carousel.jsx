@@ -53,7 +53,7 @@ const HomeCarousel = ({}) => {
             delay: 2000,
           }),
         ]}
-        className='flex flex-col h-[100vh]'
+        className='flex flex-col 100dvh xl:h-[100vh]'
       >
         <CarouselContent>
           {post.map((item) => (

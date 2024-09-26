@@ -55,11 +55,11 @@ const BuildCommunityContent = ({
 
   return (
     <div>
-      <div className='w-full text-white flex h-full'>
+      <div className='w-full text-white flex h-full flex-col lg:flex-row mb-16 lg:mb-0'>
         {/* Judul */}
         <div
-          className={`w-1/3 py-8 pr-12 flex flex-col gap-2 h-full ${
-            isOpen ? "sticky top-[5%]" : ""
+          className={`lg:w-1/3 mb-4 lg:py-8 pr-12 flex flex-col gap-2  ${
+            isOpen ? "lg:sticky lg:top-[5%] " : ""
           }`}
         >
           <h2 className='text-2xl font-bold'>{title}</h2>
@@ -71,16 +71,20 @@ const BuildCommunityContent = ({
         </div>
         {/* Konten */}
         <div
-          className={`cursor-pointer w-2/3 border-b-2 p-8 gap-12 flex text-ellipsis text-wrap overflow-hidden  ${
-            isOpen ? "h-full" : "h-fit"
-          } ${number > 0 ? "border-t-0" : "border-t-2"}`}
+          className={`cursor-pointer lg:w-2/3 border-b-2 py-4 gap-4 lg:p-8 lg:gap-8 xl:gap-12 flex truncate text-wrap overflow-hidden  ${
+            isOpen ? "h-full" : ""
+          } ${number > 0 ? "lg:border-t-0 border-t-2" : "border-t-2"}`}
           onClick={onClick}
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
         >
           {/* teks */}
           <div className={`h-full w-fit`}>
-            <div className={`text-justify ${isOpen ? "" : "line-clamp-[8]"}`}>
+            <div
+              className={`text-justify ${
+                isOpen ? "" : "line-clamp-[12] xl:line-clamp-[8]"
+              }`}
+            >
               {renderedContent}
             </div>
           </div>

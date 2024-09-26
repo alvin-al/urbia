@@ -186,7 +186,7 @@ const Services = () => {
     <div>
       {/* Hero banner */}
       <div
-        className={`flex-col flex bg-[#11468F] bg-contain max-w-full lg:content-center xl:h-[105vh] rounded-b-3xl 2xl:rounded-b-[2rem]  pt-2`}
+        className={`flex-col flex h-fit pb-16 lg:pb-0 bg-[#11468F] bg-contain max-w-full lg:content-center xl:h-[105vh] rounded-b-3xl 2xl:rounded-b-[2rem] pt-2`}
         style={{
           backgroundImage: "url('/images/services-background/line.svg')",
         }}
@@ -203,6 +203,7 @@ const Services = () => {
               width={400}
               height={400}
               loading='lazy'
+              style={{ objectFit: "contain" }}
             />
           </div>
           <div className={`lg:order-1 lg:content-center lg:w-1/2`}>

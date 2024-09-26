@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const ContactDescription = ({ title, icon: Icon, desc, nameLink, link }) => {
   return (
-    <div className='flex h-full w-full xl:gap-4'>
+    <div className='flex h-full w-full gap-4'>
       <div className='w-fit'>
         <Icon className='w-12 h-12' />
       </div>
@@ -15,7 +15,7 @@ const ContactDescription = ({ title, icon: Icon, desc, nameLink, link }) => {
           href={link}
           className={`mt-2 text-[#11468F] hover:text-[#DA1212]`}
         >
-          <button className={`text-md font-semibold`}>{nameLink}</button>
+          <button className={`text-left text-md font-semibold`}>{nameLink}</button>
         </Link>
       </div>
     </div>

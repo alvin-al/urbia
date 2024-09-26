@@ -8,11 +8,9 @@ import * as styles from "@/components/styles";
 import Navbar from "@/components/ui/Navbar";
 import ButtonOval from "@/components/ButtonOval";
 
-
 const Homepage = () => {
- 
   return (
-    <div className={`${styles.pageSize} h-screen`}>
+    <div className={`${styles.pageSize} h-dvh`}>
       {/* Loading */}
 
       {/* Carousel */}
@@ -24,8 +22,8 @@ const Homepage = () => {
         <Header title='Home' />
       </div>
       {/* Text urbia */}
-      <div className='absolute ml-20 top-[40%] transform -translate-y-[40%]'>
-        <p className='font-extrabold text-8xl text-white'>
+      <div className='absolute ml-8 lg:ml-20 top-[40%] transform -translate-y-[40%]'>
+        <p className='text-6xl leading-tight lg:leading-tight lg:text-7xl font-extrabold xl:text-8xl text-white'>
           Urbia
           <br />
           Spatial
@@ -35,11 +33,11 @@ const Homepage = () => {
       </div>
       {/* Footer */}
       <div
-        className={`${styles.pageContainer} z-0 bottom-0 relative mt-auto bg-white py-4 gap-8 flex flex-col rounded-t-[48px]`}
+        className={`${styles.pageContainer} z-0 bottom-0 relative mt-auto bg-white py-6 lg:py-4 gap-8 flex flex-col rounded-t-[48px]`}
       >
-        <div className='flex items-center justify-between'>
+        <div className=' items-center justify-between hidden lg:flex'>
           {/* <Social /> */}
-          <Navbar />
+          <Navbar className={``} />
         </div>
         <div className='flex items-center justify-between'>
           <Footer />

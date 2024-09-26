@@ -20,9 +20,9 @@ const BuildCommunity = () => {
       <div className='z-10'>
         <Header title='Build the Community' />
       </div>
-      <div className="">
+      <div className=''>
         <div className={`${styles.pageContainer} flex flex-col w-full`}>
-          <h2 className='self-end text-white text-4xl font-bold mb-20'>
+          <h2 className='lg:self-end text-white text-4xl font-bold mt-12 mb-24 pr-20 lg:pr-0 lg:mt-0 lg:mb-20'>
             Build The Community
           </h2>
           <BuildCommunityContainer />
