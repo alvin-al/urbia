@@ -134,7 +134,7 @@ const Urbians = () => {
         </div>
         {/* Container hero */}
         <div
-          className={`flex flex-col lg:flex-row w-full justify-between lg:items-end h-dvh xl:pb-8`}
+          className={`flex flex-col lg:flex-row w-full justify-between lg:items-end h-full xl:pb-8`}
         >
           <div className='2xl:w-1/3 my-24 xl:mt-0'>
             <h1
