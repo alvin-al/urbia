@@ -8,6 +8,7 @@ import {
 import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
 import Link from "next/link";
+import * as styles from "@/components/styles";
 
 const EmblaCarousel2 = ({ slides, options }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
@@ -37,17 +38,22 @@ const EmblaCarousel2 = ({ slides, options }) => {
               <div className={`embla__slide relative`} key={slides.sys.id}>
                 <Link href={`/projects/${slides.fields.slug}`}>
                   <div
-                    className={`z-10 absolute w-full xl:h-[67vh] font-semibold opacity-0 hover:opacity-100 hover:bg-black rounded-xl hover:bg-opacity-70 text-white hover:delay-50 flex justify-center items-center hover:transition text-2xl`}
+                    className={`hidden z-10 absolute w-full xl:h-[67vh] font-semibold opacity-0 hover:opacity-100 hover:bg-black rounded-xl hover:bg-opacity-70 text-white hover:delay-50 lg:flex justify-center items-center hover:transition text-2xl`}
                   >
                     {slides.fields.title}
                   </div>
-                  <div className='w-full xl:h-[67vh] relative overflow-hidden rounded-xl'>
+                  <div
+                    className={`lg:hidden z-20 absolute bottom-8 w-full h-12 font-semibold ${styles.bluePallete} rounded-xl text-white flex justify-center items-center text-2xl`}
+                  >
+                    {slides.fields.title}
+                  </div>
+                  <div className='w-fit flex h-[80vh] xl:h-[67vh] relative overflow-hidden rounded-xl'>
                     <Image
                       width={1500}
                       height={1500}
                       src={`https:${slides.fields.mainImage.fields.file.url}`}
                       alt={`Slide ${index + 1}`}
-                      className='object-cover w-full h-full'
+                      style={{ objectFit: "cover" }}
                     />
                   </div>
                 </Link>
