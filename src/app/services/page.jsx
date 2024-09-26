@@ -193,11 +193,11 @@ const Services = () => {
       >
         <Header title='Services' />
         <div
-          className={`${styles.pageContainer} flex flex-col lg:flex-row w-[99vw] h-[140vh] lg:h-[80vh] gap-8 lg:items-center xl:items-stretch xl:justify-between`}
+          className={`${styles.pageContainer} flex flex-col lg:flex-row w-[99vw] xl:h-[140vh] lg:h-[80vh] gap-8 xl:items-center xl:justify-between`}
         >
-          <div className='lg:order-2 lg:h-2/3 my-8 h-fit xl:h-full'>
+          <div className='lg:order-2 xl:w-1/2 lg:h-2/3 my-8 h-fit xl:h-full'>
             <Image
-              className='m-auto self-center h-full w-auto xl:h-[120%]'
+              className='m-auto self-center h-full w-auto'
               src={buildingLineart}
               alt=''
               width={512}
