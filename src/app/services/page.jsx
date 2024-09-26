@@ -200,8 +200,8 @@ const Services = () => {
               className='m-auto self-center h-full w-auto xl:h-[120%]'
               src={buildingLineart}
               alt=''
-              width={400}
-              height={400}
+              width={512}
+              height={444}
               loading='lazy'
               style={{ objectFit: "contain" }}
             />
