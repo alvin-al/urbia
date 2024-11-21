@@ -49,7 +49,7 @@ const Projects = () => {
     <div className={`flex z-0 flex-col min-h-screen`}>
       <Header title='Projects' />
       <div className={`flex flex-col px-4 xl:px-0 md:pr-20 gap-4 flex-grow`}>
-        <div className='md:ml-[26%]'>
+        <div className='px-6 md:px-0 md:ml-[26%]'>
           <p className={`text-4xl font-bold`}>Our Projects</p>
         </div>
         <div className='md:hidden'>
@@ -63,7 +63,7 @@ const Projects = () => {
           id='projects'
           className='flex flex-col md:flex-row justify-center xl:max-h-[70vh] 2xl:max-h-full w-full'
         >
-          <div className='hidden x;:flex'>
+          <div className='hidden xl:flex'>
             <ProjectSidebar
               categories={categories}
               setCategory={handleCategoryChange}
