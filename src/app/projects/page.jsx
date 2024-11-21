@@ -48,11 +48,11 @@ const Projects = () => {
   return (
     <div className={`flex z-0 flex-col min-h-screen`}>
       <Header title='Projects' />
-      <div className={`flex flex-col px-4 xl:px-0 xl:pr-20 gap-4 flex-grow`}>
-        <div className='xl:ml-[27%]'>
+      <div className={`flex flex-col px-4 xl:px-0 md:pr-20 gap-4 flex-grow`}>
+        <div className='md:ml-[26%]'>
           <p className={`text-4xl font-bold`}>Our Projects</p>
         </div>
-        <div className='xl:hidden'>
+        <div className='md:hidden'>
           <ProjectDataFetcher
             onDataFetched={handleDataFetched}
             selectedCategory={selectedCategory}
@@ -61,22 +61,20 @@ const Projects = () => {
         </div>
         <div
           id='projects'
-          className='flex flex-col xl:flex-row justify-center xl:max-h-[70vh] w-full'
+          className='flex flex-col md:flex-row justify-center xl:max-h-[70vh] 2xl:max-h-full w-full'
         >
-          <div className='hidden xl:flex xl:w-1/4'>
+          <div className='hidden x;:flex'>
             <ProjectSidebar
               categories={categories}
               setCategory={handleCategoryChange}
               selectedCategory={selectedCategory}
             />
           </div>
-          <div className='xl:w-3/4'>
-            <ProjectContentSlider
-              category={selectedCategory}
-              slides={filteredPosts()}
-              options={OPTIONS}
-            />
-          </div>
+          <ProjectContentSlider
+            category={selectedCategory}
+            slides={filteredPosts()}
+            options={OPTIONS}
+          />
         </div>
       </div>
       <div className={`${styles.pageContainer} mt-auto`}>

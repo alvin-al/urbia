@@ -74,7 +74,7 @@ const ProjectDataFetcher = ({
   return (
     <div className=''>
       <Select onValueChange={onCategoryChange} value={selectedCategory}>
-        <SelectTrigger className='w-full bg-white'>
+        <SelectTrigger className='w-full border-b bg-white rounded-none'>
           <SelectValue placeholder={selectedCategory} />
         </SelectTrigger>
         <SelectContent>

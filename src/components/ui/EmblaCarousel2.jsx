@@ -12,6 +12,7 @@ import * as styles from "@/components/styles";
 
 const EmblaCarousel2 = ({ slides, options }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
+  const [loading, setLoading] = useState(true);
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi);
@@ -24,10 +25,18 @@ const EmblaCarousel2 = ({ slides, options }) => {
   } = usePrevNextButtons(emblaApi);
 
   useEffect(() => {
-    if (emblaApi) {
-      // Do something with Embla instance
+    if (slides && slides.length > 0) {
+      setLoading(false);
     }
-  }, [emblaApi]);
+  }, [slides]);
+
+  if (loading) {
+    return (
+      <div className='flex justify-center items-center h-[80vh] xl:h-[67vh]'>
+        <div className='animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-gray-900'></div>
+      </div>
+    );
+  }
 
   return (
     <section className='embla'>
@@ -43,7 +52,7 @@ const EmblaCarousel2 = ({ slides, options }) => {
                     {slides.fields.title}
                   </div>
                   <div
-                    className={`lg:hidden z-20 absolute bottom-8 w-full h-12 font-semibold ${styles.bluePallete} rounded-xl text-white flex justify-center items-center text-2xl`}
+                    className={`lg:hidden z-20 absolute bottom-0 text-center w-full h-20 font-semibold ${styles.blueText} rounded-t-xl bg-white flex justify-center items-center text-2xl`}
                   >
                     {slides.fields.title}
                   </div>
